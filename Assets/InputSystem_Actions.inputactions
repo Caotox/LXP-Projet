@@ -997,45 +997,25 @@
             "id": "2f064b09-62bd-4e2f-8cf7-cd573b767569",
             "actions": [
                 {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "96b597e2-e9f6-4975-831d-2a6878e87afa",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "HorizontalMove",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "31a7abd1-171d-4950-8c40-b1810e9da679",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "VerticalMove",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "ea08f255-de2c-45d7-bc50-dff9cfde48ff",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "efe8cf0d-077d-4e56-be57-893ccbc8b8c0",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "8deed21e-bb70-4bc0-b88f-8a95bb09c5bf",
@@ -1108,7 +1088,7 @@
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "VerticalMove",
                     "isComposite": false,
                     "isPartOfComposite": true

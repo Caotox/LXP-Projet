@@ -17,7 +17,9 @@ public class PiggyController : MonoBehaviour
     void Update()
     {
         Move();
-        //Move
+        print($"H: {horizontalMove.action.ReadValue<float>()} | V: {verticalMove.action.ReadValue<float>()}");
+        print(transform.position);
+
     }
     void Move()
     {
