@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Salad
   - Tomate
+  - Baguette
+  - Steak
+  - Assiette
+  - SaladeTomadePainPlat
   layers:
   - Default
   - TransparentFX
