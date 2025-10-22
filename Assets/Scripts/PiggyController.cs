@@ -79,8 +79,11 @@ public class PiggyController : MonoBehaviour
     if (hit.collider == null)
         return;
 
-    GameObject target = hit.collider.gameObject;
-    AlimentController aliment = target.GetComponent<AlimentController>(); // A changer selon le script utilisé
+        GameObject target = hit.collider.gameObject;
+    if (target.tag == "Tomate") // gérer tous les autres cas
+        {
+            AlimentController aliment = target.GetComponent<TomateController>(); 
+        }
 
     if (aliment == null)
         return;
