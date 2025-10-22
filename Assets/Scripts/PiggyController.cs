@@ -6,21 +6,28 @@ public class PiggyController : MonoBehaviour
     public float dashSpeed = 12f;
     public float dashDuration = 0.2f;
     public float dashCooldown = 1f;
+
     public KeyCode interactKey = KeyCode.E;
-    public float interactRange = 1f; 
-    public LayerMask interactLayer; 
+    public KeyCode grabKey = KeyCode.F; 
+    public float interactRange = 1f;
+    public LayerMask interactLayer;
+
+    public Sprite saladeCoupeeSprite;
+    public Sprite tomateCoupeeSprite;
+
     private Vector2 moveDir;
     private bool isDashing = false;
     private float dashTime = 0f;
     private float dashCooldownTimer = 0f;
-    public Sprite saladeCoupeeSprite;
-    public Sprite tomateCoupeeSprite;
+
+    private GameObject heldObject = null; 
 
     void Update()
     {
         HandleMovement();
         HandleDash();
         HandleInteraction();
+        HandleGrab();
     }
 
     void HandleMovement()
@@ -30,13 +37,12 @@ public class PiggyController : MonoBehaviour
         float moveX = 0f;
         float moveY = 0f;
 
-        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.LeftArrow)) moveX = -1f;
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) moveX = -1f;
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) moveX = 1f;
-        if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow)) moveY = 1f;
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) moveY = 1f;
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) moveY = -1f;
 
         moveDir = new Vector2(moveX, moveY).normalized;
-
         transform.position += (Vector3)(moveDir * moveSpeed * Time.deltaTime);
     }
 
@@ -66,30 +72,54 @@ public class PiggyController : MonoBehaviour
     {
         if (Input.GetKeyDown(interactKey))
         {
-            Debug.Log("Interaction key pressed");
             RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDir, interactRange, interactLayer);
 
             if (hit.collider != null)
             {
-                Debug.Log("Objet interactif détecté : ");
                 GameObject target = hit.collider.gameObject;
 
                 if (target.CompareTag("Salad"))
                 {
-                    Debug.Log("Salade détectée !");
-                    Debug.Log("Changement de sprite pour la salade");
-                    Sprite newSprite = saladeCoupeeSprite;
-                    target.GetComponent<SpriteRenderer>().sprite = newSprite;
+                    target.GetComponent<SpriteRenderer>().sprite = saladeCoupeeSprite;
                 }
 
                 if (target.CompareTag("Tomate"))
                 {
-                    Debug.Log("Tomate détectée !");
-                    Debug.Log("Changement de sprite pour la tomate");
-                    Sprite newSprite = tomateCoupeeSprite;
-                    target.GetComponent<SpriteRenderer>().sprite = newSprite;
+                    target.GetComponent<SpriteRenderer>().sprite = tomateCoupeeSprite;
                 }
             }
         }
+    }
+
+    void HandleGrab()
+    {
+        if (Input.GetKeyDown(grabKey) && heldObject == null)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDir, interactRange, interactLayer);
+
+            if (hit.collider != null)
+            {
+                heldObject = hit.collider.gameObject;
+                heldObject.GetComponent<Rigidbody2D>().isKinematic = true; 
+            }
+        }
+
+        if (Input.GetKey(grabKey) && heldObject != null)
+        {
+            Vector3 holdOffset = new Vector3(moveDir.x, moveDir.y, 0) * 0.5f; 
+            heldObject.transform.position = transform.position + holdOffset;
+        }
+
+        if (Input.GetKeyUp(grabKey) && heldObject != null)
+        {
+            heldObject.GetComponent<Rigidbody2D>().isKinematic = false;
+            heldObject = null;
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3)(moveDir * interactRange));
     }
 }
