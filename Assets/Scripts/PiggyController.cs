@@ -12,6 +12,7 @@ public class PiggyController : MonoBehaviour
     public KeyCode grabKey = KeyCode.F; 
     public float interactRange = 1f;
     public LayerMask interactLayer;
+    public LayerMask grabLayer;
 
     public Sprite saladeCoupeeSprite;
     public Sprite tomateCoupeeSprite;
@@ -22,6 +23,8 @@ public class PiggyController : MonoBehaviour
     private float dashCooldownTimer = 0f;
 
     private GameObject heldObject = null; 
+    private int originalSortingOrder; 
+    private SpriteRenderer heldObjectRenderer;
 
     void Update()
     {
@@ -73,47 +76,50 @@ public class PiggyController : MonoBehaviour
 {
     if (!Input.GetKeyDown(interactKey))
         return;
-
-    RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDir, interactRange, interactLayer);
-
-    if (hit.collider == null)
-        return;
-
-        GameObject target = hit.collider.gameObject;
-        AlimentController aliment = target.GetComponent<AlimentController>();
-
-
-        if (aliment == null)
-            return;
-    
-    if (aliment.isTomate)
-    {
-        // Action spécifique à la tomate
-    }
-    else if (aliment.isSalade)
-    {
-        // Action spécifique à la salade
-    }
-    else if (aliment.isViande)
-    {
-        // Action spécifique à la viande
-    }
-    else if (aliment.isPain)
-    {
-        // Action spécifique au pain
-    }
-        
     Collider2D areaHit = Physics2D.OverlapCircle(transform.position, interactRange, interactLayer);
     if (areaHit == null)
+    {
+        Debug.Log("Aucune zone détectée");
         return;
+    }
 
     string areaTag = areaHit.tag;
+    Debug.Log("Zone détectée: " + areaTag);
 
-    if (areaTag == "PlancheADecouper")
+    AlimentController aliment = null;
+    Collider2D[] objetsSurZone = Physics2D.OverlapCircleAll(areaHit.transform.position, 1f);
+    
+    foreach (Collider2D obj in objetsSurZone)
     {
-        if ((aliment.isTomate || aliment.isSalade) && !aliment.isCut)
+        AlimentController alimentTemp = obj.GetComponent<AlimentController>();
+        if (alimentTemp != null)
+        {
+            aliment = alimentTemp;
+            Debug.Log("Aliment trouvé sur la zone: " + aliment.name);
+            break;
+        }
+    }
+
+    if (aliment == null)
+    {
+        Debug.Log("Aucun aliment trouvé sur la zone " + areaTag);
+        return;
+    }
+
+    Debug.Log("Aliment: " + aliment.name + " - isTomate: " + aliment.isTomate + " - isOnPlanche: " + aliment.isOnPlanche + " - isCut: " + aliment.isCut);
+
+    if (areaTag == "Planche")
+    {
+        Debug.Log("Sur la planche à découper");
+        if (aliment.isOnPlanche && (aliment.isTomate || aliment.isSalade) && !aliment.isCut)
         {
             currentAction = "isCutting";
+            Debug.Log("Action définie: " + currentAction);
+        }
+        else
+        {
+            Debug.Log(" - isOnPlanche: " + aliment.isOnPlanche);
+            Debug.Log(" - !isCut: " + !aliment.isCut);
         }
     }
     else if (areaTag == "PlaqueDeCuisson")
@@ -133,6 +139,7 @@ public class PiggyController : MonoBehaviour
 
     if (!string.IsNullOrEmpty(currentAction))
     {
+        Debug.Log("Exécution de l'action: " + currentAction);
         aliment.HandleAlimentAction(aliment.isTomate, 
             aliment.isSalade, 
             aliment.isPain, 
@@ -142,7 +149,6 @@ public class PiggyController : MonoBehaviour
             aliment.isAssiette,
             currentAction
         );
-
         currentAction = "";
     }
 }
@@ -152,11 +158,16 @@ public class PiggyController : MonoBehaviour
     {
         if (Input.GetKeyDown(grabKey) && heldObject == null)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDir, interactRange, interactLayer);
-
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDir, interactRange, grabLayer);
             if (hit.collider != null)
             {
                 heldObject = hit.collider.gameObject;
+                heldObjectRenderer = heldObject.GetComponent<SpriteRenderer>();
+                if (heldObjectRenderer != null)
+                {
+                    originalSortingOrder = heldObjectRenderer.sortingOrder;
+                    heldObjectRenderer.sortingOrder = 2;
+                }
                 Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
@@ -174,13 +185,38 @@ public class PiggyController : MonoBehaviour
 
         if (Input.GetKeyUp(grabKey) && heldObject != null)
         {
+
+            Collider2D[] overlaps = Physics2D.OverlapCircleAll(heldObject.transform.position, 1f);
+
+            foreach (Collider2D overlap in overlaps)
+            {
+                if (overlap.CompareTag("Planche"))
+                {
+                    AlimentController aliment = heldObject.GetComponent<AlimentController>();
+                    if (aliment != null)
+                    {
+                        if (aliment.isTomate)
+                        {
+                            Debug.Log("Tomate posée sur la planche à découper !");
+                            aliment.isOnPlanche = true;
+                        }
+                        else if (aliment.isSalade)
+                        {
+                            Debug.Log("Salade posée sur la planche à découper !");
+                            aliment.isOnPlanche = true;
+                        }
+                    }
+                }
+
+
+            }
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.bodyType = RigidbodyType2D.Dynamic; 
-        }
-            heldObject = null;
-        }
+                if (rb != null)
+                {
+                    rb.bodyType = RigidbodyType2D.Dynamic;
+                }
+                heldObject = null;
+            }
     }
 
     private void OnDrawGizmosSelected()

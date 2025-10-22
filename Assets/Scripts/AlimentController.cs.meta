@@ -1,2 +1,19 @@
 fileFormatVersion: 2
 guid: d267d716291054e4ea3550ee7f1c1f5a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tomateCutPrefab: {fileID: 2557323036103491848, guid: 254ff4ab78e8fab40a61b3627ce43b19, type: 3}
+  - saladeCutPrefab: {instanceID: 0}
+  - viandeCookedPrefab: {instanceID: 0}
+  - painAssiettePrefab: {instanceID: 0}
+  - assiettePainViandePrefab: {instanceID: 0}
+  - assiettePainViandeTomatePrefab: {instanceID: 0}
+  - assiettePainViandeTomateSaladePrefab: {instanceID: 0}
+  - piggyController: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

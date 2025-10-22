@@ -9,6 +9,7 @@ public class AlimentController : MonoBehaviour
     public bool isCut;
     public bool isCooked;
     public bool isAssiette;
+    public bool isOnPlanche = false;
     public GameObject tomateCutPrefab;
     public GameObject saladeCutPrefab;
     public GameObject viandeCookedPrefab;
@@ -18,7 +19,7 @@ public class AlimentController : MonoBehaviour
     public GameObject assiettePainViandeTomateSaladePrefab;
     // autres Prefabs selon les besoins
 
-    public PiggyController piggyController;
+    public PiggyController piggyController; 
 
     void Start()
     {
@@ -49,10 +50,38 @@ public class AlimentController : MonoBehaviour
     )
     {
         Debug.Log("Handling action: " + action);
+        if (action == "isCutting")
+        {
+            if (isOnPlanche)
+            {
+                if (isTomate && !isCut)
+                {
+                    Debug.Log("Découpe la tomate !");
+                    ReplaceWithPrefab(tomateCutPrefab);
+                }
+                else if (isSalade && !isCut)
+                {
+                    Debug.Log("Découpe la salade !");
+                    ReplaceWithPrefab(saladeCutPrefab);
+                }
+            }
+            else
+            {
+                Debug.Log("L'aliment n'est pas sur la planche !");
+            }
+        }
     }
 
     void ReplaceWithPrefab(GameObject prefab)
     {
+        Debug.Log("Prefab reçu: " + (prefab != null ? prefab.name : "NULL"));
+    
+    if (prefab == null)
+    {
+        
+        Debug.Log("TomateCutPrefab: " + (tomateCutPrefab != null ? tomateCutPrefab.name : "NULL"));
+        return;
+    }
         Instantiate(prefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
