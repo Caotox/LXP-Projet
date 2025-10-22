@@ -80,14 +80,29 @@ public class PiggyController : MonoBehaviour
         return;
 
         GameObject target = hit.collider.gameObject;
-    if (target.tag == "Tomate") // gérer tous les autres cas
-        {
-            AlimentController aliment = target.GetComponent<TomateController>(); 
-        }
+        AlimentController aliment = target.GetComponent<AlimentController>();
 
-    if (aliment == null)
-        return;
 
+        if (aliment == null)
+            return;
+    
+    if (aliment.isTomate)
+    {
+        // Action spécifique à la tomate
+    }
+    else if (aliment.isSalade)
+    {
+        // Action spécifique à la salade
+    }
+    else if (aliment.isViande)
+    {
+        // Action spécifique à la viande
+    }
+    else if (aliment.isPain)
+    {
+        // Action spécifique au pain
+    }
+        
     Collider2D areaHit = Physics2D.OverlapCircle(transform.position, interactRange, interactLayer);
     if (areaHit == null)
         return;
@@ -118,7 +133,13 @@ public class PiggyController : MonoBehaviour
 
     if (!string.IsNullOrEmpty(currentAction))
     {
-        aliment.HandleAlimentAction(
+        aliment.HandleAlimentAction(aliment.isTomate, 
+            aliment.isSalade, 
+            aliment.isPain, 
+            aliment.isViande,
+            aliment.isCut, 
+            aliment.isCooked, 
+            aliment.isAssiette,
             currentAction
         );
 
@@ -136,8 +157,13 @@ public class PiggyController : MonoBehaviour
             if (hit.collider != null)
             {
                 heldObject = hit.collider.gameObject;
-                heldObject.GetComponent<Rigidbody2D>().isKinematic = true; 
+                Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.bodyType = RigidbodyType2D.Kinematic;
+                }
             }
+            Debug.Log("Objet saisi: " + (heldObject != null ? heldObject.name : "Aucun"));
         }
 
         if (Input.GetKey(grabKey) && heldObject != null)
@@ -148,7 +174,11 @@ public class PiggyController : MonoBehaviour
 
         if (Input.GetKeyUp(grabKey) && heldObject != null)
         {
-            heldObject.GetComponent<Rigidbody2D>().isKinematic = false;
+            Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic; 
+        }
             heldObject = null;
         }
     }
