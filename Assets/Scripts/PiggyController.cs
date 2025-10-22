@@ -14,6 +14,7 @@ public class PiggyController : MonoBehaviour
     private float dashTime = 0f;
     private float dashCooldownTimer = 0f;
     public Sprite saladeCoupeeSprite;
+    public Sprite tomateCoupeeSprite;
 
     void Update()
     {
@@ -78,6 +79,14 @@ public class PiggyController : MonoBehaviour
                     Debug.Log("Salade détectée !");
                     Debug.Log("Changement de sprite pour la salade");
                     Sprite newSprite = saladeCoupeeSprite;
+                    target.GetComponent<SpriteRenderer>().sprite = newSprite;
+                }
+
+                if (target.CompareTag("Tomate"))
+                {
+                    Debug.Log("Tomate détectée !");
+                    Debug.Log("Changement de sprite pour la tomate");
+                    Sprite newSprite = tomateCoupeeSprite;
                     target.GetComponent<SpriteRenderer>().sprite = newSprite;
                 }
             }
