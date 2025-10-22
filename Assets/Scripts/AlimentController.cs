@@ -16,6 +16,7 @@ public class AlimentController : MonoBehaviour
     public GameObject assiettePainViandePrefab;
     public GameObject assiettePainViandeTomatePrefab;
     public GameObject assiettePainViandeTomateSaladePrefab;
+    // autres Prefabs selon les besoins
 
     public PiggyController piggyController;
 
@@ -47,72 +48,7 @@ public class AlimentController : MonoBehaviour
         string action
     )
     {
-        if (action == "isCutting")
-        {
-            if (isTomate && !isCut)
-            {
-                ReplaceWithPrefab(tomateCutPrefab);
-                return;
-            }
-            if (isSalade && !isCut)
-            {
-                ReplaceWithPrefab(saladeCutPrefab);
-                return;
-            }
-        }
-
-        if (action == "isCooking")
-        {
-            if (isViande && !isCooked)
-            {
-                ReplaceWithPrefab(viandeCookedPrefab);
-                return;
-            }
-        }
-
-        if (action == "isPlatting")
-        {
-
-            if (isPain && !isAssiette)
-            {
-                ReplaceWithPrefab(painAssiettePrefab);
-                return;
-            }
-
-            if (isAssiette && isPain && NearbyHas("ViandeCooked"))
-            {
-                ReplaceWithPrefab(assiettePainViandePrefab);
-                return;
-            }
-
-            if (ComparePrefabName("AssiettePainViande") && NearbyHas("TomateCut"))
-            {
-                ReplaceWithPrefab(assiettePainViandeTomatePrefab);
-                return;
-            }
-
-            if (ComparePrefabName("AssiettePainViandeTomate") && NearbyHas("SaladeCut"))
-            {
-                ReplaceWithPrefab(assiettePainViandeTomateSaladePrefab);
-                return;
-            }
-        }
-    }
-
-    bool NearbyHas(string namePart)
-    {
-        Collider2D[] nearby = Physics2D.OverlapCircleAll(transform.position, 1.2f);
-        foreach (var obj in nearby)
-        {
-            if (obj.name.Contains(namePart))
-                return true;
-        }
-        return false;
-    }
-
-    bool ComparePrefabName(string namePart)
-    {
-        return gameObject.name.Contains(namePart);
+        Debug.Log("Handling action: " + action);
     }
 
     void ReplaceWithPrefab(GameObject prefab)
