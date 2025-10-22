@@ -10,8 +10,6 @@ public class CameraFollow2D : MonoBehaviour
 
     void LateUpdate()
     {
-        if (target == null) return;
-
         Vector3 desiredPosition = new Vector3(
             target.position.x + offset.x,
             target.position.y + offset.y,
