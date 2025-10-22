@@ -7,9 +7,11 @@ public class BaguetteCutController : MonoBehaviour
     public bool isSalade;
     public bool isPain;
     public bool isViande;
+
     public bool isCut;
-    //public bool isCutting = GameObject.GetValue(PiggController<isCutting>);
+    public bool isCooked;
     public bool isAssiette;
+    public string currentAction = "";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,9 +21,11 @@ public class BaguetteCutController : MonoBehaviour
         isViande = false;
         isCut = true;
         isAssiette = true;
+        isCooked = false;
+
 
     }
-    
+
     public void CutBaguette()
     {
         if (!isCut)

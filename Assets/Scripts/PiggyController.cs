@@ -6,6 +6,7 @@ public class PiggyController : MonoBehaviour
     public float dashSpeed = 12f;
     public float dashDuration = 0.2f;
     public float dashCooldown = 1f;
+    public string currentAction = "";
 
     public KeyCode interactKey = KeyCode.E;
     public KeyCode grabKey = KeyCode.F; 
