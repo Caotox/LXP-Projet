@@ -70,27 +70,59 @@ public class PiggyController : MonoBehaviour
     }
 
     void HandleInteraction()
+{
+    if (!Input.GetKeyDown(interactKey))
+        return;
+
+    RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDir, interactRange, interactLayer);
+
+    if (hit.collider == null)
+        return;
+
+    GameObject target = hit.collider.gameObject;
+    AlimentController aliment = target.GetComponent<AlimentController>(); // A changer selon le script utilisé
+
+    if (aliment == null)
+        return;
+
+    Collider2D areaHit = Physics2D.OverlapCircle(transform.position, interactRange, interactLayer);
+    if (areaHit == null)
+        return;
+
+    string areaTag = areaHit.tag;
+
+    if (areaTag == "PlancheADecouper")
     {
-        if (Input.GetKeyDown(interactKey))
+        if ((aliment.isTomate || aliment.isSalade) && !aliment.isCut)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDir, interactRange, interactLayer);
-
-            if (hit.collider != null)
-            {
-                GameObject target = hit.collider.gameObject;
-
-                if (target.CompareTag("Salad"))
-                {
-                    target.GetComponent<SpriteRenderer>().sprite = saladeCoupeeSprite;
-                }
-
-                if (target.CompareTag("Tomate"))
-                {
-                    target.GetComponent<SpriteRenderer>().sprite = tomateCoupeeSprite;
-                }
-            }
+            currentAction = "isCutting";
         }
     }
+    else if (areaTag == "PlaqueDeCuisson")
+    {
+        if (aliment.isViande && !aliment.isCooked)
+        {
+            currentAction = "isCooking";
+        }
+    }
+    else if (areaTag == "Assiette")
+    {
+        if (!aliment.isAssiette)
+        {
+            currentAction = "isPlatting";
+        }
+    }
+
+    if (!string.IsNullOrEmpty(currentAction))
+    {
+        aliment.HandleAlimentAction(
+            currentAction
+        );
+
+        currentAction = "";
+    }
+}
+
 
     void HandleGrab()
     {
