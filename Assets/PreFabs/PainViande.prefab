@@ -196,8 +196,8 @@ MonoBehaviour:
   assiettePainViandePrefab: {fileID: 0}
   assiettePainSaladePrefab: {fileID: 0}
   assiettePainTomatePrefab: {fileID: 0}
-  assiettePainViandeTomatePrefab: {fileID: 0}
+  assiettePainViandeTomatePrefab: {fileID: 1948698563831474033, guid: 9f8581556c1b1429cb8387cf7de5c224, type: 3}
   assiettePainSaladeTomatePrefab: {fileID: 0}
-  assiettePainViandeSaladePrefab: {fileID: 0}
+  assiettePainViandeSaladePrefab: {fileID: 6046426587715597936, guid: bc6cfbfd276774b4faa641c5a20a3832, type: 3}
   assiettePainViandeTomateSaladePrefab: {fileID: 0}
   piggyController: {fileID: 0}
