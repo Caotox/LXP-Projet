@@ -16,7 +16,7 @@ public class AlimentController : MonoBehaviour
     public GameObject painCutPrefab;
     public GameObject viandeCookedPrefab;
     public GameObject viandeCookedPlatePrefab;
-    public GameObject painCutPrefab;
+    //public GameObject painCutPrefab;
     public GameObject painAssiettePrefab;
     public GameObject assiettePainViandePrefab;
     public GameObject assiettePainSaladePrefab;
@@ -50,6 +50,45 @@ public class AlimentController : MonoBehaviour
     {
         Debug.Log("Handling action: " + action);
         if (action == "isCutting")
+        {
+            if (isOnPlanche)
+            {
+                if (isTomate && !isCut)
+                {
+                    Debug.Log("Découpe la tomate !");
+                    ReplaceWithPrefab(tomateCutPrefab);
+                }
+                else if (isSalade && !isCut)
+                {
+                    Debug.Log("Découpe la salade !");
+                    ReplaceWithPrefab(saladeCutPrefab);
+                }
+                else if (isPain && !isCut)
+                {
+                    Debug.Log("Découpe le pain !");
+                    ReplaceWithPrefab(painCutPrefab);
+                }
+            }
+            else
+            {
+                Debug.Log("L'aliment n'est pas sur la planche !");
+            }
+        }
+        if (action == "isCooking")
+        {
+            if (isOnPoele)
+            {
+                if (isViande && !isCooked)
+                {
+                    Debug.Log("Cuit la viande !");
+                    ReplaceWithPrefab(viandeCookedPrefab);
+                }
+            }
+            else
+            {
+                Debug.Log("L'aliment n'est pas dans la poêle !");
+            }
+        }
         {
             if (isOnPlanche)
             {
