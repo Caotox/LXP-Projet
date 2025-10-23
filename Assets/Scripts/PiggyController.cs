@@ -14,8 +14,8 @@ public class PiggyController : MonoBehaviour
     public LayerMask interactLayer;
     public LayerMask grabLayer;
 
-    public Sprite saladeCoupeeSprite;
-    public Sprite tomateCoupeeSprite;
+    //public Sprite saladeCoupeeSprite;
+    //kpublic Sprite tomateCoupeeSprite;
 
     private Vector2 moveDir;
     private bool isDashing = false;

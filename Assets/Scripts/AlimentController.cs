@@ -32,15 +32,6 @@ public class AlimentController : MonoBehaviour
         if (piggyController == null) return;
 
         string action = piggyController.currentAction;
-
-        if (!string.IsNullOrEmpty(action))
-        {
-            HandleAlimentAction(
-                isTomate, isSalade, isPain, isViande,
-                isCut, isCooked, isAssiette,
-                action
-            );
-        }
     }
 
     public void HandleAlimentAction(
