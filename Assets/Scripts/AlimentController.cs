@@ -16,10 +16,6 @@ public class AlimentController : MonoBehaviour
     public GameObject painCutPrefab;
     public GameObject viandeCookedPrefab;
     public GameObject viandeCookedPlatePrefab;
-<<<<<<< HEAD
-    //public GameObject painCutPrefab;
-=======
->>>>>>> 97839e72f755f1f46e4dac68460a7dbec304b4d4
     public GameObject painAssiettePrefab;
     public GameObject assiettePainViandePrefab;
     public GameObject assiettePainSaladePrefab;
