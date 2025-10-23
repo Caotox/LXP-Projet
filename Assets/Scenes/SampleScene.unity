@@ -435,7 +435,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &191724339 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2417546932176376107, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
@@ -635,8 +634,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> a4816572388c23cb778cd62bf8d26327aa9b2311
+
 --- !u!1 &232877355
 GameObject:
   m_ObjectHideFlags: 0

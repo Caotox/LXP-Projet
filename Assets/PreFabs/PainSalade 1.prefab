@@ -184,7 +184,7 @@ MonoBehaviour:
   isViande: 0
   isCut: 1
   isCooked: 0
-  isAssiette: 1
+  isAssiette: 0
   isOnPlanche: 0
   isOnPoele: 0
   tomateCutPrefab: {fileID: 0}

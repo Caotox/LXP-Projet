@@ -192,7 +192,7 @@ MonoBehaviour:
   viandeCookedPrefab: {fileID: 0}
   viandeCookedPlatePrefab: {fileID: 0}
   painCutPrefab: {fileID: 0}
-  painAssiettePrefab: {fileID: 0}
+  painAssiettePrefab: {fileID: 8800242035069163752, guid: f2939e7513d0b4be1972840d7c683479, type: 3}
   assiettePainViandePrefab: {fileID: 0}
   assiettePainSaladePrefab: {fileID: 0}
   assiettePainTomatePrefab: {fileID: 0}
