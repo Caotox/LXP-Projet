@@ -14,8 +14,8 @@ public class PiggyController : MonoBehaviour
     public LayerMask interactLayer;
     public LayerMask grabLayer;
 
-    public Sprite saladeCoupeeSprite;
-    public Sprite tomateCoupeeSprite;
+    //public Sprite saladeCoupeeSprite;
+    //kpublic Sprite tomateCoupeeSprite;
 
     private Vector2 moveDir;
     private bool isDashing = false;
@@ -23,8 +23,10 @@ public class PiggyController : MonoBehaviour
     private float dashCooldownTimer = 0f;
 
     private GameObject heldObject = null; 
-    private int originalSortingOrder; 
+    private int originalSortingOrder;
     private SpriteRenderer heldObjectRenderer;
+    public GameObject tomatePrefab;
+    public GameObject SaladePrefab;
 
     void Update()
     {
@@ -175,6 +177,14 @@ public class PiggyController : MonoBehaviour
                 }
             }
             Debug.Log("Objet saisi: " + (heldObject != null ? heldObject.name : "Aucun"));
+            if (heldObject != null && heldObject.tag == "Tomate")
+            {
+                Instantiate(tomatePrefab, heldObject.transform.position, Quaternion.identity);
+            }
+            if (heldObject != null && heldObject.tag == "Salad")
+            {
+                Instantiate(SaladePrefab, heldObject.transform.position, Quaternion.identity);
+            }
         }
 
         if (Input.GetKey(grabKey) && heldObject != null)

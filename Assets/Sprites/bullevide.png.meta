@@ -1,18 +1,19 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 383abef2d259b7e46ae7ec38bcea8373
-=======
-<<<<<<< HEAD
-guid: 5368926e4b84e4673a8b59c11b4610a5
-=======
-guid: ab020af6b3019ff4bb88ff937988d790
->>>>>>> 88a008e (updt)
->>>>>>> 656ed140707dcbfb06f542f3633db9426f782e07
+guid: 4d1c174a4292998428e354e8ce213c09
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2247313356226522092
-    second: poeleviande_0
+      213: 5133557632521947653
+    second: bullevide_0
+  - first:
+      213: -3159855298047757204
+    second: bullevide_1
+  - first:
+      213: 4718284804958703234
+    second: bullevide_2
+  - first:
+      213: -4800293636837811890
+    second: bullevide_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: poeleviande_0
+      name: bullevide_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 94
-        width: 467
-        height: 309
+        x: 109
+        y: 153
+        width: 292
+        height: 271
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4149027c860ffc0e0800000000000000
-      internalID: -2247313356226522092
+      spriteID: 50a4770d77f0e3740800000000000000
+      internalID: 5133557632521947653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullevide_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 120
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c643a3a1950f524d0800000000000000
+      internalID: -3159855298047757204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullevide_2
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 87
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ecfa41807ba7140800000000000000
+      internalID: 4718284804958703234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullevide_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 98
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49d6bece5ee16db0800000000000000
+      internalID: -4800293636837811890
       vertices: []
       indices: 
       edges: []
@@ -143,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      poeleviande_0: -2247313356226522092
+      bullevide_0: 5133557632521947653
+      bullevide_1: -3159855298047757204
+      bullevide_2: 4718284804958703234
+      bullevide_3: -4800293636837811890
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

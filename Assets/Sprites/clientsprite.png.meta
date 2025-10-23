@@ -1,18 +1,13 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 383abef2d259b7e46ae7ec38bcea8373
-=======
-<<<<<<< HEAD
-guid: 5368926e4b84e4673a8b59c11b4610a5
-=======
-guid: ab020af6b3019ff4bb88ff937988d790
->>>>>>> 88a008e (updt)
->>>>>>> 656ed140707dcbfb06f542f3633db9426f782e07
+guid: cb26b912931bfd544a5d8e7c7c98a655
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2247313356226522092
-    second: poeleviande_0
+      213: -7894775404261613471
+    second: clientsprite_0
+  - first:
+      213: -2994415238850969128
+    second: clientsprite_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: poeleviande_0
+      name: clientsprite_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 94
-        width: 467
-        height: 309
+        x: 211
+        y: 386
+        width: 104
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4149027c860ffc0e0800000000000000
-      internalID: -2247313356226522092
+      spriteID: 160ee7f199f107290800000000000000
+      internalID: -7894775404261613471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clientsprite_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 21
+        width: 173
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d185429433b176d0800000000000000
+      internalID: -2994415238850969128
       vertices: []
       indices: 
       edges: []
@@ -143,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      poeleviande_0: -2247313356226522092
+      clientsprite_0: -7894775404261613471
+      clientsprite_1: -2994415238850969128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

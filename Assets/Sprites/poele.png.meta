@@ -1,18 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 383abef2d259b7e46ae7ec38bcea8373
-=======
-<<<<<<< HEAD
-guid: 5368926e4b84e4673a8b59c11b4610a5
-=======
-guid: ab020af6b3019ff4bb88ff937988d790
->>>>>>> 88a008e (updt)
->>>>>>> 656ed140707dcbfb06f542f3633db9426f782e07
+guid: abe90e27218fee641a175296520f8a99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2247313356226522092
-    second: poeleviande_0
+      213: 3805951781864877862
+    second: poele_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: poeleviande_0
+      name: poele_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 94
-        width: 467
-        height: 309
+        x: 0
+        y: 0
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4149027c860ffc0e0800000000000000
-      internalID: -2247313356226522092
+      spriteID: 62f22561bf471d430800000000000000
+      internalID: 3805951781864877862
       vertices: []
       indices: 
       edges: []
@@ -143,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      poeleviande_0: -2247313356226522092
+      poele_0: 3805951781864877862
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
