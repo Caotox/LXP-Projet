@@ -23,8 +23,10 @@ public class PiggyController : MonoBehaviour
     private float dashCooldownTimer = 0f;
 
     private GameObject heldObject = null; 
-    private int originalSortingOrder; 
+    private int originalSortingOrder;
     private SpriteRenderer heldObjectRenderer;
+    public GameObject tomatePrefab;
+    public GameObject SaladePrefab;
 
     void Update()
     {
@@ -175,6 +177,14 @@ public class PiggyController : MonoBehaviour
                 }
             }
             Debug.Log("Objet saisi: " + (heldObject != null ? heldObject.name : "Aucun"));
+            if (heldObject != null && heldObject.tag == "Tomate")
+            {
+                Instantiate(tomatePrefab, transform.position, Quaternion.identity);
+            }
+            if (heldObject != null && heldObject.tag == "Salad")
+            {
+                Instantiate(SaladePrefab, transform.position, Quaternion.identity);
+            }
         }
 
         if (Input.GetKey(grabKey) && heldObject != null)
