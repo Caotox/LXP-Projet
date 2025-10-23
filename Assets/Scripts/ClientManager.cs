@@ -3,13 +3,14 @@ using UnityEngine;
 public class ClientManager : MonoBehaviour
 {
     [Header("Références")]
-    [SerializeField] private GameObject clientPrefab;
-    [SerializeField] private Transform spawnPoint;
+public GameObject clientPrefab;
+    public Transform spawnPoint;
 
     [Header("Paramètres de spawn")]
-    [SerializeField] private float spawnInterval = 15f;
+    public float spawnInterval = 15f;
 
     private float timer;
+    public float spawnDistance = 8f;
 
     private void Start()
     {
@@ -37,7 +38,8 @@ public class ClientManager : MonoBehaviour
             return;
         }
 
-        Instantiate(clientPrefab, spawnPoint.position, Quaternion.identity);
+        Instantiate(clientPrefab, spawnPoint.position + Vector3.down * spawnDistance, Quaternion.identity);
+        spawnDistance += 8f;
         Debug.Log("Nouveau client spawn !");
     }
 }

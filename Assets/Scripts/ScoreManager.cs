@@ -1,28 +1,34 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance { get; private set; }
-    private int score = 0;
+    public static ScoreManager Instance;
+    [SerializeField] public TextMeshProUGUI scoreText;
+    private int score;
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (Instance == null) Instance = this;
+            else DontDestroyOnLoad(gameObject);
+    }
+    private void Start()
+    {
+        UpdateScoreText();
     }
 
     public void AddScore(int points)
     {
         score += points;
-        Debug.Log("Score = " + score);
+        UpdateScoreText();
     }
 
-    public int GetScore() => score;
+    private void UpdateScoreText()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score;
+        }
+    }
 }
