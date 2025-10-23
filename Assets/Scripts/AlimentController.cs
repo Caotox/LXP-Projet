@@ -16,10 +16,7 @@ public class AlimentController : MonoBehaviour
     public GameObject painCutPrefab;
     public GameObject viandeCookedPrefab;
     public GameObject viandeCookedPlatePrefab;
-<<<<<<< HEAD
-    //public GameObject painCutPrefab;
-=======
->>>>>>> 97839e72f755f1f46e4dac68460a7dbec304b4d4
+
     public GameObject painAssiettePrefab;
     public GameObject assiettePainViandePrefab;
     public GameObject assiettePainSaladePrefab;
@@ -121,13 +118,15 @@ public class AlimentController : MonoBehaviour
     void ReplaceWithPrefab(GameObject prefab)
     {
         Debug.Log("Prefab reçu: " + (prefab != null ? prefab.name : "NULL"));
-    
-    if (prefab == null)
-    {
-        
-        return;
-    }
+
+        if (prefab == null)
+        {
+
+            return;
+        }
         Instantiate(prefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
+
+    
 }

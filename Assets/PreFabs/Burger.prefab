@@ -81,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: fb0142abab3c08b478fb0dfba6b51126, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -189,9 +189,9 @@ MonoBehaviour:
   isOnPoele: 0
   tomateCutPrefab: {fileID: 2557323036103491848, guid: 8b20c2dbfb6374aaba5571492c00be47, type: 3}
   saladeCutPrefab: {fileID: 7045279634324686740, guid: 1e8a4dfe435f1584a973071e4d04028c, type: 3}
+  painCutPrefab: {fileID: 0}
   viandeCookedPrefab: {fileID: 3497041418344994883, guid: 1c7203e33eff9481792279890f406c10, type: 3}
   viandeCookedPlatePrefab: {fileID: 0}
-  painCutPrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 8800242035069163752, guid: f2939e7513d0b4be1972840d7c683479, type: 3}
   assiettePainViandePrefab: {fileID: 0}
   assiettePainSaladePrefab: {fileID: 0}

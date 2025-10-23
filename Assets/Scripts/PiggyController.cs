@@ -121,7 +121,7 @@ public class PiggyController : MonoBehaviour
     if (areaTag == "Planche")
     {
         Debug.Log("Sur la planche à découper");
-        if (aliment.isOnPlanche && (aliment.isTomate || aliment.isSalade) && !aliment.isCut)
+        if (aliment.isOnPlanche && (aliment.isTomate || aliment.isSalade || aliment.isPain) && !aliment.isCut)
         {
             currentAction = "isCutting";
             Debug.Log("Action définie: " + currentAction);
@@ -133,9 +133,14 @@ public class PiggyController : MonoBehaviour
             Debug.Log(" - !isCut: " + !aliment.isCut);
         }
     }
-    else if (areaTag == "Plaque")
+    else if (areaTag == "Poele")
         {
-        Debug.Log("Sur la plaque de cuisson");
+            Debug.Log(" SUR POÊLE - Vérification cuisson");
+        Debug.Log(" - isOnPoele: " + aliment.isOnPoele);
+        Debug.Log(" - isViande: " + aliment.isViande);
+        Debug.Log(" - !isCooked: " + !aliment.isCooked);
+            Debug.Log("Sur la plaque de cuisson");
+            Debug.Log(aliment.name + " - isOnPoele: " + aliment.isOnPoele + " - isViande: " + aliment.isViande + " - isCooked: " + aliment.isCooked);
         if (aliment.isOnPoele && aliment.isViande && !aliment.isCooked)
         {
             currentAction = "isCooking";
@@ -230,10 +235,10 @@ public class PiggyController : MonoBehaviour
                             Debug.Log("Salade posée sur la planche à découper !");
                             aliment.isOnPlanche = true;
                         }
-                        else if (aliment.isSalade)
+                        else if (aliment.isPain)
                         {
-                            messageText.text = "LA VIANDE NE SE DECOUPE PAS !";
-                            alertPanel.SetActive(true);
+                            Debug.Log("Pain posé sur la planche à découper !");
+                            aliment.isOnPlanche = true;
                         }
                     }
                 }
