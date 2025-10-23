@@ -10,6 +10,7 @@ public class AlimentController : MonoBehaviour
     public bool isCooked;
     public bool isAssiette;
     public bool isOnPlanche = false;
+    public bool isOnPoele = false;
     public GameObject tomateCutPrefab;
     public GameObject saladeCutPrefab;
     public GameObject viandeCookedPrefab;

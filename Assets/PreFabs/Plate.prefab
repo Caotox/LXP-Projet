@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6182669233467908076}
   - component: {fileID: -5700509584041383406}
   - component: {fileID: -7861257384467263166}
-  m_Layer: 3
+  - component: {fileID: 5868661188010989176}
+  m_Layer: 6
   m_Name: Plate
   m_TagString: Assiette
   m_Icon: {fileID: 0}
@@ -28,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 7111794425734040198}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.2053, y: 7.5853, z: 0}
-  m_LocalScale: {x: 0.5099, y: 0.5099, z: 1}
+  m_LocalPosition: {x: -10.748071, y: -18.496265, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -126,7 +127,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.04294491, y: 0.18783689}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -136,7 +137,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 9.8957615, y: 9.777758}
   m_EdgeRadius: 0
 --- !u!50 &-7861257384467263166
 Rigidbody2D:
@@ -165,3 +166,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5868661188010989176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111794425734040198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d267d716291054e4ea3550ee7f1c1f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlimentController
+  isTomate: 0
+  isSalade: 0
+  isPain: 0
+  isViande: 0
+  isCut: 0
+  isCooked: 0
+  isAssiette: 1
+  isOnPlanche: 0
+  isOnPoele: 0
+  tomateCutPrefab: {fileID: 0}
+  saladeCutPrefab: {fileID: 0}
+  viandeCookedPrefab: {fileID: 0}
+  painAssiettePrefab: {fileID: 0}
+  assiettePainViandePrefab: {fileID: 0}
+  assiettePainViandeTomatePrefab: {fileID: 0}
+  assiettePainViandeTomateSaladePrefab: {fileID: 0}
+  piggyController: {fileID: 0}

@@ -11,6 +11,19 @@ TagManager:
   - Assiette
   - SaladeTomadePainPlat
   - Planche
+  - Burger
+  - PainSalade
+  - PainSaladeViande
+  - PainCutAssiette
+  - SaladeTomatePain
+  - PainViandeTomate
+  - CutSalade
+  - CutTomate
+  - Poele
+  - PoeleViande
+  - ViandeCook
+  - PainCut
+  - PainViande
   layers:
   - Default
   - TransparentFX
