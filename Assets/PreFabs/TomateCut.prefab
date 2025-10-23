@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eea3b14fc84034f13b598b3339ec1c98, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5382c8a47200b41689261c652d454f87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -190,8 +190,14 @@ MonoBehaviour:
   tomateCutPrefab: {fileID: 2557323036103491848, guid: 254ff4ab78e8fab40a61b3627ce43b19, type: 3}
   saladeCutPrefab: {fileID: 0}
   viandeCookedPrefab: {fileID: 0}
+  viandeCookedPlatePrefab: {fileID: 0}
+  painCutPrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
   assiettePainViandePrefab: {fileID: 0}
+  assiettePainSaladePrefab: {fileID: 0}
+  assiettePainTomatePrefab: {fileID: 0}
   assiettePainViandeTomatePrefab: {fileID: 0}
+  assiettePainSaladeTomatePrefab: {fileID: 0}
+  assiettePainViandeSaladePrefab: {fileID: 0}
   assiettePainViandeTomateSaladePrefab: {fileID: 0}
   piggyController: {fileID: 0}

@@ -190,8 +190,14 @@ MonoBehaviour:
   tomateCutPrefab: {fileID: 0}
   saladeCutPrefab: {fileID: 0}
   viandeCookedPrefab: {fileID: 0}
+  viandeCookedPlatePrefab: {fileID: 0}
+  painCutPrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
   assiettePainViandePrefab: {fileID: 0}
+  assiettePainSaladePrefab: {fileID: 0}
+  assiettePainTomatePrefab: {fileID: 0}
   assiettePainViandeTomatePrefab: {fileID: 0}
-  assiettePainViandeTomateSaladePrefab: {fileID: 0}
+  assiettePainSaladeTomatePrefab: {fileID: 0}
+  assiettePainViandeSaladePrefab: {fileID: 0}
+  assiettePainViandeTomateSaladePrefab: {fileID: 7631010658702601428, guid: 4a54d1551f23845878db6cb65b6abda2, type: 3}
   piggyController: {fileID: 0}

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5203731170006705106}
   - component: {fileID: 6368028587785477227}
   - component: {fileID: 1501578274526687751}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PainTomate
-  m_TagString: Untagged
+  m_TagString: PainTomate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7365101754153434776}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.9, y: -28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 66b78ba8fe988b0479ee748fc1fb8247, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &5203731170006705106
@@ -190,8 +190,14 @@ MonoBehaviour:
   tomateCutPrefab: {fileID: 0}
   saladeCutPrefab: {fileID: 0}
   viandeCookedPrefab: {fileID: 0}
+  viandeCookedPlatePrefab: {fileID: 0}
+  painCutPrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
   assiettePainViandePrefab: {fileID: 0}
-  assiettePainViandeTomatePrefab: {fileID: 0}
+  assiettePainSaladePrefab: {fileID: 0}
+  assiettePainTomatePrefab: {fileID: 0}
+  assiettePainViandeTomatePrefab: {fileID: 1948698563831474033, guid: 9f8581556c1b1429cb8387cf7de5c224, type: 3}
+  assiettePainSaladeTomatePrefab: {fileID: 8616761550144645077, guid: 751003613258b4145a646319602895f0, type: 3}
+  assiettePainViandeSaladePrefab: {fileID: 0}
   assiettePainViandeTomateSaladePrefab: {fileID: 0}
   piggyController: {fileID: 0}

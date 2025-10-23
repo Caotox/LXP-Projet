@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5003320370762644590}
   - component: {fileID: 5016029665015161749}
+  - component: {fileID: -4500724816929306508}
   m_Layer: 6
   m_Name: Poele
   m_TagString: Poele
@@ -90,3 +91,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4500724816929306508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8447784399861181573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d267d716291054e4ea3550ee7f1c1f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlimentController
+  isTomate: 0
+  isSalade: 0
+  isPain: 0
+  isViande: 0
+  isCut: 0
+  isCooked: 0
+  isAssiette: 0
+  isOnPlanche: 0
+  isOnPoele: 0
+  tomateCutPrefab: {fileID: 0}
+  saladeCutPrefab: {fileID: 0}
+  viandeCookedPrefab: {fileID: 0}
+  viandeCookedPlatePrefab: {fileID: 0}
+  painCutPrefab: {fileID: 0}
+  painAssiettePrefab: {fileID: 0}
+  assiettePainViandePrefab: {fileID: 0}
+  assiettePainSaladePrefab: {fileID: 0}
+  assiettePainTomatePrefab: {fileID: 0}
+  assiettePainViandeTomatePrefab: {fileID: 0}
+  assiettePainSaladeTomatePrefab: {fileID: 0}
+  assiettePainViandeSaladePrefab: {fileID: 0}
+  assiettePainViandeTomateSaladePrefab: {fileID: 0}
+  piggyController: {fileID: 0}
