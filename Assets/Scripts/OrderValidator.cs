@@ -3,7 +3,7 @@ using UnityEngine;
 public class OrderValidator : MonoBehaviour
 {
     [Header("Points attribués pour une bonne commande")]
-    [SerializeField] private int pointsPerCorrectDish = 10;
+    [SerializeField] public int pointsPerCorrectDish = 10;
 
     public void TryDeliver(string deliveredDish, ClientOrder client)
     {
