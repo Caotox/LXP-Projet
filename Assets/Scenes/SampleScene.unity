@@ -405,6 +405,7 @@ MonoBehaviour:
   isOnPlanche: 0
   tomateCutPrefab: {fileID: 2557323036103491848, guid: 254ff4ab78e8fab40a61b3627ce43b19, type: 3}
   saladeCutPrefab: {fileID: 0}
+  painCutPrefab: {fileID: 0}
   viandeCookedPrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
   assiettePainViandePrefab: {fileID: 0}
@@ -2693,9 +2694,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1652494282}
   - component: {fileID: 1652494281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ElementsCuisine_0 (1)
-  m_TagString: Untagged
+  m_TagString: Plaque
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2812,6 +2813,7 @@ MonoBehaviour:
   isOnPlanche: 0
   tomateCutPrefab: {fileID: 2557323036103491848, guid: 254ff4ab78e8fab40a61b3627ce43b19, type: 3}
   saladeCutPrefab: {fileID: 7045279634324686740, guid: 1e8a4dfe435f1584a973071e4d04028c, type: 3}
+  painCutPrefab: {fileID: 0}
   viandeCookedPrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
   assiettePainViandePrefab: {fileID: 0}
@@ -2914,9 +2916,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1890342043}
   - component: {fileID: 1890342042}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ElementsCuisine_0
-  m_TagString: Untagged
+  m_TagString: Plaque
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,6 +12,7 @@ public class AlimentController : MonoBehaviour
     public bool isOnPlanche = false;
     public GameObject tomateCutPrefab;
     public GameObject saladeCutPrefab;
+    public GameObject painCutPrefab;
     public GameObject viandeCookedPrefab;
     public GameObject painAssiettePrefab;
     public GameObject assiettePainViandePrefab;
@@ -55,6 +56,11 @@ public class AlimentController : MonoBehaviour
                     Debug.Log("Découpe la salade !");
                     ReplaceWithPrefab(saladeCutPrefab);
                 }
+                 else if (isPain && !isCut)
+                {
+                    Debug.Log("Découpe le pain !");
+                    ReplaceWithPrefab(painCutPrefab);
+                }
             }
             else
             {
@@ -70,7 +76,6 @@ public class AlimentController : MonoBehaviour
     if (prefab == null)
     {
         
-        Debug.Log("TomateCutPrefab: " + (tomateCutPrefab != null ? tomateCutPrefab.name : "NULL"));
         return;
     }
         Instantiate(prefab, transform.position, Quaternion.identity);

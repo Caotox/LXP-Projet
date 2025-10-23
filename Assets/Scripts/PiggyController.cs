@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PiggyController : MonoBehaviour
 {
@@ -7,15 +8,17 @@ public class PiggyController : MonoBehaviour
     public float dashDuration = 0.2f;
     public float dashCooldown = 1f;
     public string currentAction = "";
+    public GameObject alertPanel;
+    public Text messageText;
 
     public KeyCode interactKey = KeyCode.E;
     public KeyCode grabKey = KeyCode.F; 
     public float interactRange = 1f;
     public LayerMask interactLayer;
     public LayerMask grabLayer;
-
+ 
     //public Sprite saladeCoupeeSprite;
-    //kpublic Sprite tomateCoupeeSprite;
+    //public Sprite tomateCoupeeSprite;
 
     private Vector2 moveDir;
     private bool isDashing = false;
@@ -27,6 +30,11 @@ public class PiggyController : MonoBehaviour
     private SpriteRenderer heldObjectRenderer;
     public GameObject tomatePrefab;
     public GameObject SaladePrefab;
+    public GameObject SteakPrefab;
+    void Start()
+    {
+        alertPanel.SetActive(false);
+    }
 
     void Update()
     {
@@ -119,16 +127,19 @@ public class PiggyController : MonoBehaviour
             Debug.Log("Action définie: " + currentAction);
         }
         else
-        {
+            {   
+            Debug.Log("Conditions non remplies pour découper:");
             Debug.Log(" - isOnPlanche: " + aliment.isOnPlanche);
             Debug.Log(" - !isCut: " + !aliment.isCut);
         }
     }
-    else if (areaTag == "PlaqueDeCuisson")
-    {
-        if (aliment.isViande && !aliment.isCooked)
+    else if (areaTag == "Plaque")
+        {
+        Debug.Log("Sur la plaque de cuisson");
+        if (aliment.isOnPoele && aliment.isViande && !aliment.isCooked)
         {
             currentAction = "isCooking";
+            Debug.Log("Action définie: " + currentAction);
         }
     }
     else if (areaTag == "Assiette")
@@ -185,6 +196,10 @@ public class PiggyController : MonoBehaviour
             {
                 Instantiate(SaladePrefab, heldObject.transform.position, Quaternion.identity);
             }
+            if (heldObject != null && heldObject.tag == "Steak")
+            {
+                Instantiate(SteakPrefab, heldObject.transform.position, Quaternion.identity);
+            }
         }
 
         if (Input.GetKey(grabKey) && heldObject != null)
@@ -215,9 +230,26 @@ public class PiggyController : MonoBehaviour
                             Debug.Log("Salade posée sur la planche à découper !");
                             aliment.isOnPlanche = true;
                         }
+                        else if (aliment.isSalade)
+                        {
+                            messageText.text = "LA VIANDE NE SE DECOUPE PAS !";
+                            alertPanel.SetActive(true);
+                        }
                     }
                 }
 
+                if (overlap.CompareTag("Poele"))
+                {
+                    AlimentController aliment = heldObject.GetComponent<AlimentController>();
+                    if (aliment != null)
+                    {
+                        if (aliment.isViande)
+                        {
+                            Debug.Log("Viande posée sur la plaque de cuisson !");
+                            aliment.isOnPoele = true;
+                        }
+                    }
+                }
 
             }
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();

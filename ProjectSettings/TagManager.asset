@@ -11,6 +11,7 @@ TagManager:
   - Assiette
   - SaladeTomadePainPlat
   - Planche
+  - Plaque
   layers:
   - Default
   - TransparentFX
