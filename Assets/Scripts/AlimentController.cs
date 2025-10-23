@@ -10,13 +10,20 @@ public class AlimentController : MonoBehaviour
     public bool isCooked;
     public bool isAssiette;
     public bool isOnPlanche = false;
+    public bool isOnPoele = false;
     public GameObject tomateCutPrefab;
     public GameObject saladeCutPrefab;
     public GameObject painCutPrefab;
     public GameObject viandeCookedPrefab;
+    public GameObject viandeCookedPlatePrefab;
+    public GameObject painCutPrefab;
     public GameObject painAssiettePrefab;
     public GameObject assiettePainViandePrefab;
+    public GameObject assiettePainSaladePrefab;
+    public GameObject assiettePainTomatePrefab;
     public GameObject assiettePainViandeTomatePrefab;
+    public GameObject assiettePainSaladeTomatePrefab;
+    public GameObject assiettePainViandeSaladePrefab;
     public GameObject assiettePainViandeTomateSaladePrefab;
     // autres Prefabs selon les besoins
 

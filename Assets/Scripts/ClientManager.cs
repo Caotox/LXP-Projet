@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ClientManager : MonoBehaviour
@@ -8,28 +6,38 @@ public class ClientManager : MonoBehaviour
     [SerializeField] private GameObject clientPrefab;
     [SerializeField] private Transform spawnPoint;
 
-    [Header("Paramètres")]
+    [Header("Paramètres de spawn")]
     [SerializeField] private float spawnInterval = 15f;
 
-    private readonly List<GameObject> clients = new List<GameObject>();
+    private float timer;
 
     private void Start()
     {
-        StartCoroutine(SpawnLoop());
+        SpawnClient();
+
+        timer = 0f;
     }
 
-    private IEnumerator SpawnLoop()
+    private void Update()
     {
-        while (true)
+        timer += Time.deltaTime;
+
+        if (timer >= spawnInterval)
         {
-            yield return new WaitForSeconds(spawnInterval);
-            if (!clientPrefab || !spawnPoint) continue;
-
-            GameObject c = Instantiate(clientPrefab, spawnPoint.position, Quaternion.identity);
-            clients.Add(c);
-
-            var order = c.GetComponent<ClientOrder>();
-            if (order) order.SetRandomOrder();
+            SpawnClient();
+            timer = 0f;
         }
+    }
+
+    private void SpawnClient()
+    {
+        if (clientPrefab == null || spawnPoint == null)
+        {
+            Debug.LogWarning("Client Prefab ou SpawnPoint non assigné !");
+            return;
+        }
+
+        Instantiate(clientPrefab, spawnPoint.position, Quaternion.identity);
+        Debug.Log("Nouveau client spawn !");
     }
 }

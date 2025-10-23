@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6199300377579178395
+--- !u!1 &881779585630943299
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 775338610373780138}
-  - component: {fileID: 2869730374955892834}
-  - component: {fileID: 5641862871225674546}
-  - component: {fileID: 2278752961040578143}
-  m_Layer: 3
-  m_Name: Salad
-  m_TagString: Salad
+  - component: {fileID: 3562581202862517243}
+  - component: {fileID: 7053056417118829102}
+  - component: {fileID: 7226836997561830388}
+  - component: {fileID: 6030921721552935496}
+  - component: {fileID: 8263998525580109333}
+  m_Layer: 0
+  m_Name: PainTomate
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &775338610373780138
+--- !u!4 &3562581202862517243
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6199300377579178395}
+  m_GameObject: {fileID: 881779585630943299}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.30247, y: -10.063834, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalPosition: {x: 8.7, y: -34, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2869730374955892834
+--- !u!212 &7053056417118829102
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6199300377579178395}
+  m_GameObject: {fileID: 881779585630943299}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f1b78510406bc4c48ada29bab817875b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,16 +90,16 @@ SpriteRenderer:
   m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5641862871225674546
+--- !u!61 &7226836997561830388
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6199300377579178395}
+  m_GameObject: {fileID: 881779585630943299}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -126,7 +127,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.006175041, y: 0.28079033}
+  m_Offset: {x: 0.18446374, y: -0.42163467}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -136,30 +137,57 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10.734846, y: 8.419376}
+  m_Size: {x: 9.75038, y: 10.435532}
   m_EdgeRadius: 0
---- !u!114 &2278752961040578143
+--- !u!50 &6030921721552935496
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881779585630943299}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &8263998525580109333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6199300377579178395}
+  m_GameObject: {fileID: 881779585630943299}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d267d716291054e4ea3550ee7f1c1f5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AlimentController
-  isTomate: 0
-  isSalade: 1
-  isPain: 0
+  isTomate: 1
+  isSalade: 0
+  isPain: 1
   isViande: 0
-  isCut: 0
+  isCut: 1
   isCooked: 0
-  isAssiette: 0
+  isAssiette: 1
   isOnPlanche: 0
   isOnPoele: 0
-  tomateCutPrefab: {fileID: 2557323036103491848, guid: 254ff4ab78e8fab40a61b3627ce43b19, type: 3}
+  tomateCutPrefab: {fileID: 0}
   saladeCutPrefab: {fileID: 0}
   viandeCookedPrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
