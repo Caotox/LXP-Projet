@@ -24,6 +24,7 @@ TagManager:
   - ViandeCook
   - PainCut
   - PainViande
+  - PainTomate
   layers:
   - Default
   - TransparentFX
