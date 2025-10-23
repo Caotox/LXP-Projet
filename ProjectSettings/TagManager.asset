@@ -3,15 +3,36 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Plaque
+  - CutSalade
+  - Salad
+  - PainSaladeViande
+  - SaladeTomatePain
+  - PainSalade
+  - Burger
+  - PainCutAssiette
+  - CutTomate
+  - ViandeCook
+  - PainTomate
+  - PainViande
+  - PainViandeTomate
+  - Assiette
+  - Baguette
+  - PainCut
+  - PoeleViande
+  - Steak
+  - Planche
+  - Tomate
+  - Poele
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Aliment
   - Water
   - UI
-  - 
+  - Station
   - 
   - 
   - 

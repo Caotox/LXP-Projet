@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5203731170006705106}
   - component: {fileID: 6368028587785477227}
   - component: {fileID: 1501578274526687751}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: PainTomate
-  m_TagString: PainTomate
+  m_TagString: Assiette
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,15 +82,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 6733494539652724456, guid: 4bde31e6a883a49ecbd69b2147f7f7a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 4.08, y: 4.07}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &5203731170006705106
@@ -131,8 +131,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
-    newSize: {x: 5, y: 5}
+    oldSize: {x: 4.08, y: 4.07}
+    newSize: {x: 4.08, y: 4.07}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -187,6 +187,10 @@ MonoBehaviour:
   isAssiette: 1
   isOnPlanche: 0
   isOnPoele: 0
+  hasPain: 1
+  hasTomate: 1
+  hasSalade: 0
+  hasSteak: 0
   tomateCutPrefab: {fileID: 0}
   saladeCutPrefab: {fileID: 0}
   painCutPrefab: {fileID: 0}
@@ -195,9 +199,9 @@ MonoBehaviour:
   painAssiettePrefab: {fileID: 0}
   assiettePainViandePrefab: {fileID: 0}
   assiettePainSaladePrefab: {fileID: 0}
-  assiettePainTomatePrefab: {fileID: 0}
+  assiettePainTomatePrefab: {fileID: 7365101754153434776}
   assiettePainViandeTomatePrefab: {fileID: 1948698563831474033, guid: 9f8581556c1b1429cb8387cf7de5c224, type: 3}
   assiettePainSaladeTomatePrefab: {fileID: 8616761550144645077, guid: 751003613258b4145a646319602895f0, type: 3}
   assiettePainViandeSaladePrefab: {fileID: 0}
-  assiettePainViandeTomateSaladePrefab: {fileID: 0}
+  assiettePainViandeTomateSaladePrefab: {fileID: 7631010658702601428, guid: 4a54d1551f23845878db6cb65b6abda2, type: 3}
   piggyController: {fileID: 0}

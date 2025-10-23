@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2079001644015796707}
   - component: {fileID: 5877911431395661177}
   - component: {fileID: 2727524935561370875}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: SaladeTomatePain
-  m_TagString: SaladeTomatePain
+  m_TagString: Assiette
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,15 +82,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -7440286888113758103, guid: 84de270eb4e8440139c05192d8e2b17c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 3.92, y: 3.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &2079001644015796707
@@ -131,8 +131,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
-    newSize: {x: 5, y: 5}
+    oldSize: {x: 3.92, y: 3.88}
+    newSize: {x: 3.92, y: 3.88}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -187,6 +187,10 @@ MonoBehaviour:
   isAssiette: 1
   isOnPlanche: 0
   isOnPoele: 0
+  hasPain: 1
+  hasTomate: 1
+  hasSalade: 1
+  hasSteak: 0
   tomateCutPrefab: {fileID: 0}
   saladeCutPrefab: {fileID: 0}
   painCutPrefab: {fileID: 0}
@@ -194,7 +198,7 @@ MonoBehaviour:
   viandeCookedPlatePrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
   assiettePainViandePrefab: {fileID: 0}
-  assiettePainSaladePrefab: {fileID: 0}
+  assiettePainSaladePrefab: {fileID: 8616761550144645077}
   assiettePainTomatePrefab: {fileID: 0}
   assiettePainViandeTomatePrefab: {fileID: 0}
   assiettePainSaladeTomatePrefab: {fileID: 0}

@@ -6,24 +6,32 @@ public class DeliveryZoneHandler : MonoBehaviour
 
     private void Start()
     {
-        validator = FindObjectOfType<OrderValidator>();
-
+        validator = Object.FindFirstObjectByType<OrderValidator>();
         if (validator == null)
         {
             Debug.LogWarning("Aucun OrderValidator trouvé dans la scène !");
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Burger"))
+        Debug.Log("Quelque chose est entré dans la Delivery Zone: " + other.name);
+
+        if (other.CompareTag("Burger") && validator != null)
         {
-            ClientOrder client = FindObjectOfType<ClientOrder>();
-            if (client != null && validator != null)
+            Debug.Log("Plat détecté, tentative de livraison...");
+            ClientOrder client = Object.FindFirstObjectByType<ClientOrder>();
+
+            if (client != null)
             {
                 validator.TryDeliver("Burger", client);
+                Destroy(other.gameObject);
+                Debug.Log("Plat livré !");
             }
-            Destroy(other.gameObject);
+            else
+            {
+                Debug.LogWarning("Aucun client trouvé !");
+            }
         }
     }
 }

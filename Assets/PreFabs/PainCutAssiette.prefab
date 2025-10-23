@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4665976265970243848}
   - component: {fileID: 2614436233346834822}
   - component: {fileID: 4919731871325974139}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: PainCutAssiette
-  m_TagString: PainCutAssiette
+  m_TagString: Assiette
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,11 +187,15 @@ MonoBehaviour:
   isAssiette: 1
   isOnPlanche: 0
   isOnPoele: 0
+  hasPain: 1
+  hasTomate: 0
+  hasSalade: 0
+  hasSteak: 0
   tomateCutPrefab: {fileID: 0}
   saladeCutPrefab: {fileID: 0}
+  painCutPrefab: {fileID: 0}
   viandeCookedPrefab: {fileID: 0}
   viandeCookedPlatePrefab: {fileID: 0}
-  painCutPrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
   assiettePainViandePrefab: {fileID: 2033051454276184411, guid: 69ea9429c863248338b8ffd8885fb368, type: 3}
   assiettePainSaladePrefab: {fileID: 7706225117828301598, guid: 000bb69b6b84942919cabfb37f6026e5, type: 3}

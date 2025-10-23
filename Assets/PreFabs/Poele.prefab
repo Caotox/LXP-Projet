@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 5003320370762644590}
   - component: {fileID: 5016029665015161749}
   - component: {fileID: -4500724816929306508}
+  - component: {fileID: 4792269853026536888}
+  - component: {fileID: 1191277002600275830}
+  - component: {fileID: 3826725890700276464}
   m_Layer: 6
   m_Name: Poele
   m_TagString: Poele
@@ -112,10 +115,14 @@ MonoBehaviour:
   isAssiette: 0
   isOnPlanche: 0
   isOnPoele: 0
+  hasPain: 0
+  hasTomate: 0
+  hasSalade: 0
+  hasSteak: 0
   tomateCutPrefab: {fileID: 0}
   saladeCutPrefab: {fileID: 0}
   painCutPrefab: {fileID: 0}
-  viandeCookedPrefab: {fileID: 0}
+  viandeCookedPrefab: {fileID: 3185657168479059622, guid: a4e2a555c7144423fa3600a43907cae6, type: 3}
   viandeCookedPlatePrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
   assiettePainViandePrefab: {fileID: 0}
@@ -126,3 +133,91 @@ MonoBehaviour:
   assiettePainViandeSaladePrefab: {fileID: 0}
   assiettePainViandeTomateSaladePrefab: {fileID: 0}
   piggyController: {fileID: 0}
+--- !u!114 &4792269853026536888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8447784399861181573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 779dedd6fd42cbe4eb45e8d74fe86328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClientOrder
+  orderedDish: 
+  dishIcon: {fileID: 0}
+  burgerSprite: {fileID: 0}
+--- !u!61 &1191277002600275830
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8447784399861181573}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5, y: 5}
+  m_EdgeRadius: 0
+--- !u!50 &3826725890700276464
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8447784399861181573}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

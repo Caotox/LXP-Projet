@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3556786863355210622}
   - component: {fileID: 1994123025266049230}
   - component: {fileID: 3392314032108433124}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: PainViande
-  m_TagString: PainViande
+  m_TagString: Assiette
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 6695811442194032452, guid: 11a21d6228cf344b29838b6ece5257be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &3556786863355210622
@@ -131,7 +131,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
+    oldSize: {x: 3.91, y: 3.83}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -187,17 +187,21 @@ MonoBehaviour:
   isAssiette: 1
   isOnPlanche: 0
   isOnPoele: 0
+  hasPain: 1
+  hasTomate: 0
+  hasSalade: 0
+  hasSteak: 1
   tomateCutPrefab: {fileID: 0}
   saladeCutPrefab: {fileID: 0}
   painCutPrefab: {fileID: 0}
   viandeCookedPrefab: {fileID: 0}
   viandeCookedPlatePrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
-  assiettePainViandePrefab: {fileID: 0}
+  assiettePainViandePrefab: {fileID: 2033051454276184411}
   assiettePainSaladePrefab: {fileID: 0}
   assiettePainTomatePrefab: {fileID: 0}
   assiettePainViandeTomatePrefab: {fileID: 1948698563831474033, guid: 9f8581556c1b1429cb8387cf7de5c224, type: 3}
   assiettePainSaladeTomatePrefab: {fileID: 0}
   assiettePainViandeSaladePrefab: {fileID: 6046426587715597936, guid: bc6cfbfd276774b4faa641c5a20a3832, type: 3}
-  assiettePainViandeTomateSaladePrefab: {fileID: 0}
+  assiettePainViandeTomateSaladePrefab: {fileID: 7631010658702601428, guid: 4a54d1551f23845878db6cb65b6abda2, type: 3}
   piggyController: {fileID: 0}

@@ -187,6 +187,10 @@ MonoBehaviour:
   isAssiette: 1
   isOnPlanche: 0
   isOnPoele: 0
+  hasPain: 1
+  hasTomate: 1
+  hasSalade: 1
+  hasSteak: 1
   tomateCutPrefab: {fileID: 2557323036103491848, guid: 8b20c2dbfb6374aaba5571492c00be47, type: 3}
   saladeCutPrefab: {fileID: 7045279634324686740, guid: 1e8a4dfe435f1584a973071e4d04028c, type: 3}
   painCutPrefab: {fileID: 0}
