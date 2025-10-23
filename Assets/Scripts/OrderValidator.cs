@@ -2,21 +2,19 @@ using UnityEngine;
 
 public class OrderValidator : MonoBehaviour
 {
+    [Header("Points attribués pour une bonne commande")]
     [SerializeField] private int pointsPerCorrectDish = 10;
 
     public void TryDeliver(string deliveredDish, ClientOrder client)
     {
-        if (!client) return;
+        if (client == null)
+        {
+            Debug.LogWarning("Aucun client trouvé lors de la livraison !");
+            return;
+        }
+        ScoreManager.Instance.AddScore(pointsPerCorrectDish);
+        Debug.Log($"Commande livrée — {pointsPerCorrectDish} points ajoutés ");
 
-        if (deliveredDish == client.orderedDish)
-        {
-            Debug.Log($"Bonne commande ({deliveredDish}) !");
-            ScoreManager.Instance.AddScore(pointsPerCorrectDish);
-            Destroy(client.gameObject);
-        }
-        else
-        {
-            Debug.Log($"Mauvais plat : attendu {client.orderedDish}, reçu {deliveredDish}");
-        }
+        Destroy(client.gameObject);
     }
 }
