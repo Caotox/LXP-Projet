@@ -378,6 +378,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &191724339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2417546932176376107, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+  m_PrefabInstance: {fileID: 6824733968116008580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &191724340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191724339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d267d716291054e4ea3550ee7f1c1f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlimentController
+  isTomate: 1
+  isSalade: 0
+  isPain: 0
+  isViande: 0
+  isCut: 0
+  isCooked: 0
+  isAssiette: 0
+  isOnPlanche: 0
+  tomateCutPrefab: {fileID: 2557323036103491848, guid: 254ff4ab78e8fab40a61b3627ce43b19, type: 3}
+  saladeCutPrefab: {fileID: 0}
+  viandeCookedPrefab: {fileID: 0}
+  painAssiettePrefab: {fileID: 0}
+  assiettePainViandePrefab: {fileID: 0}
+  assiettePainViandeTomatePrefab: {fileID: 0}
+  assiettePainViandeTomateSaladePrefab: {fileID: 0}
+  piggyController: {fileID: 0}
 --- !u!1 &192828080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1339,8 @@ MonoBehaviour:
   grabLayer:
     serializedVersion: 2
     m_Bits: 8
+  tomatePrefab: {fileID: 2417546932176376107, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+  SaladePrefab: {fileID: 6199300377579178395, guid: 3d85764176437fb41a0e642a88176273, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,39 +1976,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 172.96, y: 0, z: 403.82}
---- !u!1 &864927767 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2417546932176376107, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-  m_PrefabInstance: {fileID: 2768204843308759646}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &864927772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864927767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d267d716291054e4ea3550ee7f1c1f5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AlimentController
-  isTomate: 1
-  isSalade: 0
-  isPain: 0
-  isViande: 0
-  isCut: 0
-  isCooked: 0
-  isAssiette: 0
-  isOnPlanche: 0
-  tomateCutPrefab: {fileID: 2557323036103491848, guid: 254ff4ab78e8fab40a61b3627ce43b19, type: 3}
-  saladeCutPrefab: {fileID: 0}
-  viandeCookedPrefab: {fileID: 0}
-  painAssiettePrefab: {fileID: 0}
-  assiettePainViandePrefab: {fileID: 0}
-  assiettePainViandeTomatePrefab: {fileID: 0}
-  assiettePainViandeTomateSaladePrefab: {fileID: 0}
-  piggyController: {fileID: 0}
 --- !u!1 &1111856572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,7 +2827,7 @@ MonoBehaviour:
   isAssiette: 0
   isOnPlanche: 0
   tomateCutPrefab: {fileID: 2557323036103491848, guid: 254ff4ab78e8fab40a61b3627ce43b19, type: 3}
-  saladeCutPrefab: {fileID: 0}
+  saladeCutPrefab: {fileID: 7045279634324686740, guid: 1e8a4dfe435f1584a973071e4d04028c, type: 3}
   viandeCookedPrefab: {fileID: 0}
   painAssiettePrefab: {fileID: 0}
   assiettePainViandePrefab: {fileID: 0}
@@ -3553,78 +3555,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92d3328fe90106a4c953ce4490ec2cdc, type: 3}
---- !u!1001 &2768204843308759646
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2417546932176376107, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_Name
-      value: tomate
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301382077365581015, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301382077365581015, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301382077365581015, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301382077365581015, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301382077365581015, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301382077365581015, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301382077365581015, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301382077365581015, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301382077365581015, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4301382077365581015, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4501457636066231562, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_Size.x
-      value: 11.470176
-      objectReference: {fileID: 0}
-    - target: {fileID: 4501457636066231562, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_Size.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4501457636066231562, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      propertyPath: m_Offset.x
-      value: -1.9582162
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2417546932176376107, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 864927772}
-  m_SourcePrefab: {fileID: 100100000, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
 --- !u!1001 &3270385757306076522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3854,6 +3784,66 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 563696805}
   m_SourcePrefab: {fileID: 100100000, guid: 3d85764176437fb41a0e642a88176273, type: 3}
+--- !u!1001 &6824733968116008580
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2417546932176376107, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_Name
+      value: tomate (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301382077365581015, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301382077365581015, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301382077365581015, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301382077365581015, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301382077365581015, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301382077365581015, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301382077365581015, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301382077365581015, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301382077365581015, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301382077365581015, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2417546932176376107, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 191724340}
+  m_SourcePrefab: {fileID: 100100000, guid: 6fefafe614e7d9348a0d8a8e2c4345a8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3879,7 +3869,6 @@ SceneRoots:
   - {fileID: 1890342043}
   - {fileID: 1652494282}
   - {fileID: 608770339728334991}
-  - {fileID: 2768204843308759646}
   - {fileID: 3270385757306076522}
   - {fileID: 192828084}
   - {fileID: 1729075192}
@@ -3887,3 +3876,4 @@ SceneRoots:
   - {fileID: 1324893725}
   - {fileID: 2075443941}
   - {fileID: 1969683582}
+  - {fileID: 6824733968116008580}

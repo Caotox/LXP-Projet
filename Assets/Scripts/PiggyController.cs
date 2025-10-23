@@ -179,11 +179,11 @@ public class PiggyController : MonoBehaviour
             Debug.Log("Objet saisi: " + (heldObject != null ? heldObject.name : "Aucun"));
             if (heldObject != null && heldObject.tag == "Tomate")
             {
-                Instantiate(tomatePrefab, transform.position, Quaternion.identity);
+                Instantiate(tomatePrefab, heldObject.transform.position, Quaternion.identity);
             }
             if (heldObject != null && heldObject.tag == "Salad")
             {
-                Instantiate(SaladePrefab, transform.position, Quaternion.identity);
+                Instantiate(SaladePrefab, heldObject.transform.position, Quaternion.identity);
             }
         }
 

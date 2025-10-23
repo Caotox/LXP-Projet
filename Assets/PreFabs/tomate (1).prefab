@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4501457636066231562}
   - component: {fileID: 6697944847004811812}
   m_Layer: 3
-  m_Name: tomate
+  m_Name: tomate (1)
   m_TagString: Tomate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2417546932176376107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.46, y: 2.83, z: 0}
+  m_LocalPosition: {x: -10.641057, y: -11.820311, z: 0}
   m_LocalScale: {x: 0.6141, y: 0.6042, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.6054187, y: 0.16997099}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -136,7 +136,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 11.154101, y: 6.427759}
   m_EdgeRadius: 0
 --- !u!50 &6697944847004811812
 Rigidbody2D:
