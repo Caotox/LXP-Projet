@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f8dba4e07074250a759abc4ab0b183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  moveSpeed: 5
+  moveSpeed: 10
   dashSpeed: 12
   dashDuration: 0.2
   dashCooldown: 1
@@ -1168,6 +1168,7 @@ MonoBehaviour:
     m_Bits: 8
   tomatePrefab: {fileID: 2168805180555836945, guid: 5770b5aacf1c71541a239e3ba894363b, type: 3}
   SaladePrefab: {fileID: 6199300377579178395, guid: 3d85764176437fb41a0e642a88176273, type: 3}
+<<<<<<< HEAD
 <<<<<<< HEAD
   SteakPrefab: {fileID: 3497041418344994883, guid: 1c7203e33eff9481792279890f406c10, type: 3}
   PainPrefab: {fileID: 2567707032088315995, guid: 715406265a7a240cc8bf2ec9b5a4d31b, type: 3}
@@ -1251,6 +1252,9 @@ PrefabInstance:
   SteakPrefab: {fileID: 2082085213907115827, guid: 817851166e0b0c44c8150830a97326be, type: 3}
   viandeCookedPrefab: {fileID: 3497041418344994883, guid: 1c7203e33eff9481792279890f406c10, type: 3}
 >>>>>>> 19638e9 (updt)
+=======
+  SteakPrefab: {fileID: 0}
+>>>>>>> 3810d6b (updt)
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1552,19 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 773504094321397657, guid: 92d3328fe90106a4c953ce4490ec2cdc, type: 3}
+=======
+    - target: {fileID: 2082085213907115827, guid: 817851166e0b0c44c8150830a97326be, type: 3}
+      propertyPath: m_Name
+      value: Steak
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615230973451196190, guid: 817851166e0b0c44c8150830a97326be, type: 3}
+      propertyPath: viandeCookedPlatePrefab
+      value: 
+      objectReference: {fileID: 3185657168479059622, guid: a4e2a555c7144423fa3600a43907cae6, type: 3}
+    - target: {fileID: 5646106701991297598, guid: 817851166e0b0c44c8150830a97326be, type: 3}
+>>>>>>> 3810d6b (updt)
       propertyPath: m_LocalPosition.x
       value: 9.2
       objectReference: {fileID: 0}
