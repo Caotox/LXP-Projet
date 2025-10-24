@@ -1441,11 +1441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5101346501021018307, guid: 715406265a7a240cc8bf2ec9b5a4d31b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.1148
+      value: 9.2
       objectReference: {fileID: 0}
     - target: {fileID: 5101346501021018307, guid: 715406265a7a240cc8bf2ec9b5a4d31b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.4339
+      value: -4.9
       objectReference: {fileID: 0}
     - target: {fileID: 5101346501021018307, guid: 715406265a7a240cc8bf2ec9b5a4d31b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3348,7 +3348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClientManager
   clientPrefab: {fileID: 1099903868518787068, guid: 49279797c1598384386b18679e3c75c2, type: 3}
   spawnPoint: {fileID: 732027872}
-  spawnInterval: 15
+  spawnInterval: 30
   spawnDistance: 8
 --- !u!1 &1324893723
 GameObject:

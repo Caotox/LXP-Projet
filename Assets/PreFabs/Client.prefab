@@ -107,6 +107,9 @@ MonoBehaviour:
   orderedDish: 
   dishIcon: {fileID: 1290457521806892190}
   burgerSprite: {fileID: 21300000, guid: fb0142abab3c08b478fb0dfba6b51126, type: 3}
+  painViandeSaladeSprite: {fileID: 21300000, guid: 13bdca1192a574b45b0aeaa243f26492, type: 3}
+  painViandeTomateSprite: {fileID: 21300000, guid: d64dd8ea451de4fe4b671a1ede081765, type: 3}
+  painSaladeTomateSprite: {fileID: -7440286888113758103, guid: 84de270eb4e8440139c05192d8e2b17c, type: 3}
 --- !u!1 &7241143136816272866
 GameObject:
   m_ObjectHideFlags: 0
