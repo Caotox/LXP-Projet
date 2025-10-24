@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1440
     height: 773
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -192,8 +192,8 @@ MonoBehaviour:
     y: 0
     width: 396
     height: 363.5
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -845,9 +845,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -10.825111, y: -6.66773, z: 1.888473}
+    m_Target: {x: 688.96564, y: 634.3109, z: -7.549765}
     speed: 2
-    m_Value: {x: -10.825111, y: -6.66773, z: 1.888473}
+    m_Value: {x: 688.96564, y: 634.3109, z: -7.549765}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -897,9 +897,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 21.152962
+    m_Target: 964.95886
     speed: 2
-    m_Value: 21.152962
+    m_Value: 964.95886
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -974,7 +974,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c0d2feffd2d2feff9ad6feffec5bffff00fbffffb6b600003cb700008aeb000046ec0000
+      m_ExpandedIDs: 88b6ffff9ab6ffff22baffff3cbaffffa4c1ffffb6c1ffff3ec5ffff58c5ffff78ccffff8accffffe8ceffff38d6ffff4ad6ffff14daffffa0f0ffff9cf4ffff62f5fffffafafffff8d2000012d30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1200,7 +1200,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/PreFabs
+    - Assets/Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1210,16 +1210,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/PreFabs
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/tonio/Docs/Git_Repos/LXP-Projet
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 46.00006}
-    m_SelectedIDs: 72ba0000
-    m_LastClickedID: 47730
-    m_ExpandedIDs: 0000000022ba000000ca9a3bffffff7f
+    m_SelectedIDs: c0ba0000
+    m_LastClickedID: 47808
+    m_ExpandedIDs: 000000006cba000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1248,7 +1248,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000022ba0000
+    m_ExpandedIDs: 000000006cba0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1385,7 +1385,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 717.19995
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
