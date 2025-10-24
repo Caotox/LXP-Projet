@@ -1,3 +1,7 @@
+# ======================================
+# UNITY PROJECT (macOS)
+# ======================================
+
 # Fichiers de build et dossiers temporaires
 [Ll]ibrary/
 [Tt]emp/
@@ -6,8 +10,12 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
+[Uu]ser[Ss]ettings/
+[Pp]ackages/com.unity.collab-proxy/
 
-# Autres fichiers Unity
+# ======================================
+# Unity auto-generated files
+# ======================================
 *.csproj
 *.unitypackage
 *.pidb
@@ -21,8 +29,150 @@
 *.opendb
 *.VC.db
 
-# Dossiers Visual Studio Code
-.vscode/
+# ======================================
+# Build Outputs
+# ======================================
+*.apk
+*.aab
+*.xcodeproj
+*.xcworkspace
+*.ipa
+*.exe
+*.dll
+*.app/
+*.app.dSYM/
+*.bundle/
+*.dmg
 
-# Crash reports
+# ======================================
+# ⚙️ Visual Studio / VS Code
+# ======================================
+.vscode/
+.vs/
+*.DotSettings.user
+
+# ======================================
+# Crash Reports & Logs
+# ======================================
 sysinfo.txt
+*.stacktrace
+*.log
+
+# ======================================
+# macOS system files
+# ======================================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+._*
+
+# Thumbnails
+._.DS_Store
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# ======================================
+# Misc
+# ======================================
+/Library/
+Builds/
+/Build/
+# ======================================
+# UNITY PROJECT (macOS)
+# ======================================
+
+# Fichiers de build et dossiers temporaires
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Uu]ser[Ss]ettings/
+[Pp]ackages/com.unity.collab-proxy/
+
+# ======================================
+# Unity auto-generated files
+# ======================================
+*.csproj
+*.unitypackage
+*.pidb
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb.meta
+*.pdb
+*.opendb
+*.VC.db
+
+# ======================================
+# Build Outputs
+# ======================================
+*.apk
+*.aab
+*.xcodeproj
+*.xcworkspace
+*.ipa
+*.exe
+*.dll
+*.app/
+*.app.dSYM/
+*.bundle/
+*.dmg
+
+# ======================================
+# Visual Studio / VS Code
+# ======================================
+.vscode/
+.vs/
+*.DotSettings.user
+
+# ======================================
+# Crash Reports & Logs
+# ======================================
+sysinfo.txt
+*.stacktrace
+*.log
+
+# ======================================
+# macOS system files
+# ======================================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+._*
+
+# Thumbnails
+._.DS_Store
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# ======================================
+# Misc
+# ======================================
+/Library/
+Builds/
+/Build/
