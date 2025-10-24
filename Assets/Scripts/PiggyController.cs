@@ -480,6 +480,10 @@ void AssembleBurger(AlimentController assiette, AlimentController ingredientTenu
                 {
                     Instantiate(SteakPrefab, heldObject.transform.position, Quaternion.identity);
                 }
+                else if (heldObject.tag == "Pain")
+                {
+                    Instantiate(PainPrefab, heldObject.transform.position, Quaternion.identity);
+                }
             }
         }
 

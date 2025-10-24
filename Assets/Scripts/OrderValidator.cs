@@ -4,40 +4,41 @@ public class OrderValidator : MonoBehaviour
 {
     [SerializeField] private int pointsPerCorrectDish = 10;
 
-    public void TryDeliver(GameObject deliveredObject, ClientOrder client)
+    // 👉 On renvoie un bool ici
+    public bool TryDeliver(GameObject deliveredObject, ClientOrder client)
     {
         if (client == null)
         {
             Debug.LogWarning("⚠ Aucun client trouvé !");
-            return;
+            return false;
         }
 
         string ordered = client.orderedDish;
 
-        // 🥇 Cas Burger
+        // Cas Burger
         if (ordered == "Burger")
         {
             if (deliveredObject.CompareTag("Burger"))
             {
                 Validate(client);
+                return true;
             }
             else
             {
-                Debug.Log("❌ Commande Burger, mais mauvais plat livré.");
+                Debug.Log("Commande Burger incorrecte.");
+                return false;
             }
-            return;
         }
 
-        // 🥈 Cas plats composés
-        AlimentController aliments = deliveredObject.GetComponent<AlimentController>();
+        // Cas plats composés
+        var aliments = deliveredObject.GetComponent<AlimentController>();
         if (aliments == null)
         {
-            Debug.LogWarning("⚠ Plat livré sans AlimentController !");
-            return;
+            Debug.LogWarning("⚠ Plat sans AlimentController !");
+            return false;
         }
 
         bool valid = false;
-
         switch (ordered)
         {
             case "Pain viande salade":
@@ -52,15 +53,21 @@ public class OrderValidator : MonoBehaviour
         }
 
         if (valid)
+        {
             Validate(client);
+            return true;
+        }
         else
-            Debug.Log($"❌ Mauvais ingrédients pour '{ordered}'");
+        {
+            Debug.Log($"Mauvais ingrédients pour '{ordered}'");
+            return false;
+        }
     }
 
     private void Validate(ClientOrder client)
     {
         ScoreManager.Instance.AddScore(pointsPerCorrectDish);
-        Debug.Log($"✅ Commande '{client.orderedDish}' validée (+{pointsPerCorrectDish} pts)");
+        Debug.Log($"Commande '{client.orderedDish}' validée (+{pointsPerCorrectDish} pts)");
         Destroy(client.gameObject);
     }
 }
