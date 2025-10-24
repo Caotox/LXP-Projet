@@ -301,8 +301,24 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 397
     y: 24
+=======
+<<<<<<< HEAD
+    x: 273.5
+    y: 24
+=======
+<<<<<<< HEAD
+    x: 272.5
+    y: 78
+>>>>>>> c25c898befed76a416c8f31e299728f61b10543a
+    width: 642
+    height: 354
+=======
+    x: 396
+    y: 89
+>>>>>>> refs/remotes/origin/main
     width: 518.5
     height: 337.5
   m_SerializedDataModeController:
@@ -955,7 +971,20 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 24
+=======
+<<<<<<< HEAD
+    y: 24
+=======
+<<<<<<< HEAD
+    y: 78
+>>>>>>> c25c898befed76a416c8f31e299728f61b10543a
+    width: 271.5
+    height: 354
+=======
+    y: 89
+>>>>>>> refs/remotes/origin/main
     width: 395
     height: 337.5
   m_SerializedDataModeController:
@@ -971,7 +1000,16 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< HEAD
       scrollPos: {x: 0, y: 0}
+=======
+<<<<<<< HEAD
+      scrollPos: {x: 0, y: 0}
+=======
+<<<<<<< HEAD
+      scrollPos: {x: 0, y: 163}
+>>>>>>> c25c898befed76a416c8f31e299728f61b10543a
+>>>>>>> refs/remotes/origin/main
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 58f1ffff24f2ffff9ef9ffff
@@ -1092,8 +1130,22 @@ MonoBehaviour:
       width: 960
       height: 585.9981
     m_MinimalGUI: 1
+<<<<<<< HEAD
   m_defaultScale: 0.54010415
   m_LastWindowPixelSize: {x: 1037, y: 675}
+=======
+<<<<<<< HEAD
+  m_defaultScale: 0.6166667
+<<<<<<< HEAD
+  m_LastWindowPixelSize: {x: 642, y: 354}
+=======
+  m_LastWindowPixelSize: {x: 1284, y: 708}
+=======
+  m_defaultScale: 0.54010415
+  m_LastWindowPixelSize: {x: 1037, y: 678}
+>>>>>>> 3810d6b (updt)
+>>>>>>> c25c898befed76a416c8f31e299728f61b10543a
+>>>>>>> refs/remotes/origin/main
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -1216,10 +1268,28 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 46.00006}
     m_SelectedIDs: 28bf0000
     m_LastClickedID: 48936
     m_ExpandedIDs: 0000000024ba0000
+=======
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 82ba0000
+    m_LastClickedID: 47746
+<<<<<<< HEAD
+    m_ExpandedIDs: 000000000eba0000
+=======
+    m_ExpandedIDs: 0000000014bd0000
+=======
+    scrollPos: {x: 0, y: 46.00006}
+    m_SelectedIDs: 46bd0000
+    m_LastClickedID: 48454
+    m_ExpandedIDs: 0000000046b8000000ca9a3bffffff7f
+>>>>>>> 3810d6b (updt)
+>>>>>>> c25c898befed76a416c8f31e299728f61b10543a
+>>>>>>> refs/remotes/origin/main
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1248,7 +1318,19 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000024ba0000
+=======
+<<<<<<< HEAD
+    m_ExpandedIDs: 000000000eba0000
+=======
+<<<<<<< HEAD
+    m_ExpandedIDs: 0000000014bd0000
+=======
+    m_ExpandedIDs: 0000000046b80000
+>>>>>>> 3810d6b (updt)
+>>>>>>> c25c898befed76a416c8f31e299728f61b10543a
+>>>>>>> refs/remotes/origin/main
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1328,6 +1410,18 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    y: 404
+=======
+<<<<<<< HEAD
+    y: 458
+>>>>>>> c25c898befed76a416c8f31e299728f61b10543a
+    width: 915.5
+    height: 348
+=======
+>>>>>>> refs/remotes/origin/main
     y: 452.5
     width: 915.5
     height: 327.5
@@ -1363,8 +1457,23 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 917.5
     y: 24
+=======
+<<<<<<< HEAD
+    x: 917.5
+    y: 24
+=======
+    x: 916.5
+<<<<<<< HEAD
+    y: 78
+>>>>>>> c25c898befed76a416c8f31e299728f61b10543a
+    width: 522.5
+    height: 728
+=======
+    y: 89
+>>>>>>> refs/remotes/origin/main
     width: 522.5
     height: 691
   m_SerializedDataModeController:
