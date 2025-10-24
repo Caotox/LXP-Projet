@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PiggyController : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class PiggyController : MonoBehaviour
     public GameObject PainTomateSteakPrefab;
     public GameObject PainSaladeSteakPrefab;
     public GameObject PainSaladeTomateSteakPrefab;
+    public InputActionReference horizontalAction;
+    public InputActionReference verticalAction;
 
     private Vector2 moveDir;
     private bool isDashing = false;
@@ -53,6 +56,7 @@ public class PiggyController : MonoBehaviour
 
     void HandleMovement()
     {
+        /*
         if (isDashing) return;
 
         float moveX = 0f;
@@ -65,10 +69,39 @@ public class PiggyController : MonoBehaviour
 
         moveDir = new Vector2(moveX, moveY).normalized;
         transform.position += (Vector3)(moveDir * moveSpeed * Time.deltaTime);
+        */
+        {
+        if (isDashing) return;
+
+        float moveX = horizontalAction.action.ReadValue<float>();
+        float moveY = verticalAction.action.ReadValue<float>();
+
+        moveDir = new Vector2(moveX, moveY).normalized;
+        transform.position += (Vector3)(moveDir * moveSpeed * Time.deltaTime);
+    }
     }
 
     void HandleDash()
     {
+         if (dashCooldownTimer > 0f)
+            dashCooldownTimer -= Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Space) && dashCooldownTimer <= 0f && moveDir != Vector2.zero)
+        {
+            isDashing = true;
+            dashTime = dashDuration;
+            dashCooldownTimer = dashCooldown;
+        }
+
+        if (isDashing)
+        {
+            transform.position += (Vector3)(moveDir * dashSpeed * Time.deltaTime);
+            dashTime -= Time.deltaTime;
+
+            if (dashTime <= 0f)
+                isDashing = false;
+        }
+        /*
         if (dashCooldownTimer > 0f)
             dashCooldownTimer -= Time.deltaTime;
 
@@ -87,6 +120,7 @@ public class PiggyController : MonoBehaviour
             if (dashTime <= 0f)
                 isDashing = false;
         }
+        */
     }
 
     void HandleInteraction()
