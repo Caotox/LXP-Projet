@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PiggyController : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float dashSpeed = 12f;
+    public float moveSpeed = 8f;
+    public float dashSpeed = 15f;
     public float dashDuration = 0.2f;
     public float dashCooldown = 1f;
     public string currentAction = "";
@@ -16,6 +17,7 @@ public class PiggyController : MonoBehaviour
     public float interactRange = 1f;
     public LayerMask interactLayer;
     public LayerMask grabLayer;
+
  
     public GameObject tomatePrefab;
     public GameObject SaladePrefab;
@@ -28,6 +30,9 @@ public class PiggyController : MonoBehaviour
     public GameObject PainTomateSteakPrefab;
     public GameObject PainSaladeSteakPrefab;
     public GameObject PainSaladeTomateSteakPrefab;
+
+    public InputActionReference horizontalAction;
+    public InputActionReference verticalAction;
 
     private Vector2 moveDir;
     private bool isDashing = false;
@@ -55,13 +60,8 @@ public class PiggyController : MonoBehaviour
     {
         if (isDashing) return;
 
-        float moveX = 0f;
-        float moveY = 0f;
-
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) moveX = -1f;
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) moveX = 1f;
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) moveY = 1f;
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) moveY = -1f;
+        float moveX = horizontalAction.action.ReadValue<float>();
+        float moveY = verticalAction.action.ReadValue<float>();
 
         moveDir = new Vector2(moveX, moveY).normalized;
         transform.position += (Vector3)(moveDir * moveSpeed * Time.deltaTime);
@@ -133,15 +133,13 @@ public class PiggyController : MonoBehaviour
         }
         return;
     }
-    else // POUR PLANCHE ET POÊLE
+    else 
     {
-        // Chercher les aliments SUR la zone (pas la zone elle-même)
         Collider2D[] objetsSurZone = Physics2D.OverlapCircleAll(areaHit.transform.position, 1f);
         
         foreach (Collider2D obj in objetsSurZone)
         {
             AlimentController alimentTemp = obj.GetComponent<AlimentController>();
-            // Prendre le premier aliment valide qui n'est pas tenu
             if (alimentTemp != null && alimentTemp != heldAliment) 
             {
                 aliment = alimentTemp;
@@ -164,11 +162,11 @@ public class PiggyController : MonoBehaviour
             if (aliment.isOnPlanche && (aliment.isTomate || aliment.isSalade || aliment.isPain) && !aliment.isCut)
             {
                 currentAction = "isCutting";
-                Debug.Log("✅ Action de découpe définie !");
+                Debug.Log(" Action de découpe définie !");
             }
             else
             {
-                Debug.Log("❌ Conditions non remplies pour découper");
+                Debug.Log(" Conditions non remplies pour découper");
                 return;
             }
         }
@@ -178,16 +176,15 @@ public class PiggyController : MonoBehaviour
             if (aliment.isOnPoele && aliment.isViande && !aliment.isCooked)
             {
                 currentAction = "isCooking";
-                Debug.Log("✅ Action de cuisson définie !");
+                Debug.Log("Action de cuisson définie !");
             }
             else
             {
-                Debug.Log("❌ Conditions non remplies pour cuire");
+                Debug.Log("Conditions non remplies pour cuire");
                 return;
             }
         }
 
-        // EXÉCUTER L'ACTION
         if (!string.IsNullOrEmpty(currentAction))
         {
             Debug.Log("Exécution de l'action: " + currentAction);
