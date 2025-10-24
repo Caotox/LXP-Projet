@@ -133,7 +133,18 @@ public class PiggyController : MonoBehaviour
         }
         return;
     }
+<<<<<<< HEAD
     else 
+=======
+<<<<<<< HEAD
+    else // POUR PLANCHE ET POÊLE
+=======
+
+    AlimentController heldAliment = heldObject?.GetComponent<AlimentController>();
+
+    if (areaTag == "Planche")
+>>>>>>> 19638e9 (updt)
+>>>>>>> c25c898befed76a416c8f31e299728f61b10543a
     {
         Collider2D[] objetsSurZone = Physics2D.OverlapCircleAll(areaHit.transform.position, 1f);
         
@@ -147,6 +158,7 @@ public class PiggyController : MonoBehaviour
                 break;
             }
         }
+<<<<<<< HEAD
 
         if (aliment == null)
         {
@@ -200,8 +212,113 @@ public class PiggyController : MonoBehaviour
             );
             currentAction = "";
         }
+=======
+        else
+            {   
+            Debug.Log("Conditions non remplies pour découper:");
+            Debug.Log(" - isOnPlanche: " + aliment.isOnPlanche);
+            Debug.Log(" - !isCut: " + !aliment.isCut);
+        }
+    }
+    else if (areaTag == "Poele")
+        {
+            Debug.Log(" SUR POÊLE - Vérification cuisson");
+        Debug.Log(" - isOnPoele: " + aliment.isOnPoele);
+        Debug.Log(" - isViande: " + aliment.isViande);
+        Debug.Log(" - !isCooked: " + !aliment.isCooked);
+            Debug.Log("Sur la plaque de cuisson");
+            Debug.Log(aliment.name + " - isOnPoele: " + aliment.isOnPoele + " - isViande: " + aliment.isViande + " - isCooked: " + aliment.isCooked);
+        if (aliment.isOnPoele && aliment.isViande && !aliment.isCooked)
+        {
+            currentAction = "isCooking";
+            Debug.Log("Action définie: " + currentAction);
+        }
+    }
+    else if (areaTag == "Assiette")
+        {
+        if (heldAliment == null)
+            {
+                Debug.Log("Tu ne tiens rien à ajouter !");
+                return; 
+            }
+
+            if (!aliment.isAssiette)
+            {
+                 Debug.Log(aliment.name + " n'est pas une assiette.");
+                 return;
+            }
+
+            Debug.Log("Interaction Assiette. Tenu: " + heldAliment.name + ". Assiette: " + aliment.name);
+            
+            if (heldAliment.isPain)
+            {
+                if (!aliment.isPain) 
+                {
+                    currentAction = "isPlatting";
+                }
+                else
+                {
+                     Debug.Log("Il y a déjà du pain !");
+                }
+            }
+            else if (heldAliment.isTomate || heldAliment.isSalade)
+            {
+
+                if (!aliment.isPain) 
+                {
+                    Debug.LogWarning("ALERTE: Mets le pain d'abord !");
+                    return; 
+                }
+                
+                if (!heldAliment.isCut) 
+                {
+                    Debug.LogWarning("ALERTE: L'ingrédient n'est pas coupé !");
+                    return; 
+                }
+
+                currentAction = "isPlatting";
+            }
+            
+            else if (heldAliment.isViande) 
+            {
+                if (!aliment.isPain)
+                {
+                     Debug.LogWarning("ALERTE: Mets le pain d'abord !");
+                     return;
+                }
+                if (!heldAliment.isCooked)
+                {
+                     Debug.LogWarning("ALERTE: La viande n'est pas cuite !");
+                     return;
+                }
+                currentAction = "isPlatting";
+            }
+        }
+
+        if (!aliment.isAssiette)
+        {
+            currentAction = "isPlatting";
+        }
+
+        if (!string.IsNullOrEmpty(currentAction))
+    {
+        Debug.Log("Exécution de l'action: " + currentAction);
+        aliment.HandleAlimentAction(aliment.isTomate, 
+            aliment.isSalade, 
+            aliment.isPain, 
+            aliment.isViande,
+            aliment.isCut, 
+            aliment.isCooked, 
+            aliment.isAssiette,
+            currentAction
+        );
+        currentAction = "";
+>>>>>>> 19638e9 (updt)
     }
 }
+    
+
+    
 
     bool CanAssembleOnPlate(AlimentController assiette, AlimentController ingredientTenu)
     {
