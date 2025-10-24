@@ -18,6 +18,7 @@ TagManager:
   - Poele
   - PoeleViande
   - Planche
+  - BaconMaker
   layers:
   - Default
   - TransparentFX
