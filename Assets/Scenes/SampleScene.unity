@@ -2618,7 +2618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5101346501021018307, guid: 715406265a7a240cc8bf2ec9b5a4d31b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.3
+      value: 8.4
       objectReference: {fileID: 0}
     - target: {fileID: 5101346501021018307, guid: 715406265a7a240cc8bf2ec9b5a4d31b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3174,6 +3174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrderValidator
   pointsPerCorrectDish: 10
+  clientPrefab: {fileID: 1099903868518787068, guid: 49279797c1598384386b18679e3c75c2, type: 3}
+  spawnPoint: {fileID: 732027872}
 --- !u!1001 &1234849592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3278,7 +3280,7 @@ MonoBehaviour:
   clientPrefab: {fileID: 1099903868518787068, guid: 49279797c1598384386b18679e3c75c2, type: 3}
   spawnPoint: {fileID: 732027872}
   spawnInterval: 30
-  spawnDistance: 8
+  activeClients: []
 --- !u!1 &1324893723
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,7 +4772,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be69e2a3cc634d7298e694e38d09f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeliveryZoneHandler
-  emptyPlatePrefab: {fileID: 7111794425734040198, guid: 92d3328fe90106a4c953ce4490ec2cdc, type: 3}
 --- !u!1 &1824346411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1960278892015456929, guid: f6347d4514f64a34fa90563e2bf4b4f2, type: 3}

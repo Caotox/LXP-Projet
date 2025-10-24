@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PiggyController : MonoBehaviour
 {
@@ -57,6 +58,10 @@ public class PiggyController : MonoBehaviour
         HandleDash();
         HandleInteraction();
         HandleGrab();
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -480,7 +485,7 @@ void AssembleBurger(AlimentController assiette, AlimentController ingredientTenu
                 {
                     Instantiate(SteakPrefab, heldObject.transform.position, Quaternion.identity);
                 }
-                else if (heldObject.tag == "Pain")
+                else if (heldObject.tag == "Baguette")
                 {
                     Instantiate(PainPrefab, heldObject.transform.position, Quaternion.identity);
                 }

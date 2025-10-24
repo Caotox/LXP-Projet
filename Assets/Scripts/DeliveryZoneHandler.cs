@@ -4,9 +4,6 @@ public class DeliveryZoneHandler : MonoBehaviour
 {
     private OrderValidator validator;
 
-    [Header("Assiette vide à respawn")]
-    [SerializeField] private GameObject emptyPlatePrefab;
-
     private void Start()
     {
         validator = Object.FindFirstObjectByType<OrderValidator>();
@@ -16,6 +13,7 @@ public class DeliveryZoneHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Vérifie si c'est un plat livrable
         bool isBurger = other.CompareTag("Burger");
         bool hasAliments = other.GetComponent<AlimentController>() != null;
 
@@ -27,15 +25,8 @@ public class DeliveryZoneHandler : MonoBehaviour
             bool valid = validator.TryDeliver(other.gameObject, client);
             if (valid)
             {
-                if (emptyPlatePrefab != null)
-                {
-                    Instantiate(emptyPlatePrefab, other.gameObject.transform.position, Quaternion.identity);
-                    Destroy(other.gameObject);
-                }
-                else
-                {
-                    Debug.LogWarning("⚠ EmptyPlatePrefab non assigné !");
-                }
+                // ✅ Plat validé → on le détruit ici
+                Destroy(other.gameObject);
             }
         }
     }
