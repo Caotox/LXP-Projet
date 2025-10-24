@@ -5,6 +5,8 @@ public class OrderValidator : MonoBehaviour
     [SerializeField] private int pointsPerCorrectDish = 10;
     public GameObject clientPrefab;
     public Transform spawnPoint;
+    public Transform spawnPoint2;
+    public GameObject assiette;
 
     // 👉 On renvoie un bool ici
     public bool TryDeliver(GameObject deliveredObject, ClientOrder client)
@@ -58,6 +60,7 @@ public class OrderValidator : MonoBehaviour
         {
             Validate(client);
             Instantiate(clientPrefab, spawnPoint.position, Quaternion.identity);
+            Instantiate(assiette, spawnPoint2.position, Quaternion.identity);
             return true;
         }
         else

@@ -40,7 +40,7 @@ public class GameTimer : MonoBehaviour
 
     void OnTimerEnd()
     {
-        // Plus tard je pense qu'on peut jouer une autre scène ou afficher un message je verrais bien
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
     }
 
     public void RestartTimer()
