@@ -4,60 +4,25 @@
 TagManager:
   serializedVersion: 3
   tags:
-<<<<<<< HEAD
   - Plaque
-  - CutSalade
-  - Salad
-  - PainSaladeViande
-  - SaladeTomatePain
-  - PainSalade
-  - Burger
-  - PainCutAssiette
-  - CutTomate
-  - ViandeCook
-  - PainTomate
-  - PainViande
-  - PainViandeTomate
-  - Assiette
-  - Baguette
-  - PainCut
-  - PoeleViande
-  - Steak
-  - Planche
   - Tomate
-  - Poele
-=======
-  - PainSalade
-  - Baguette
+  - Salad
   - Steak
+  - Baguette
   - Assiette
-  - PainTomate
-  - PainCutAssiette
+  - Burger
+  - CutSalade
+  - ViandeCook
+  - PainCut
+  - CutTomate
   - Poele
   - PoeleViande
-  - SaladeTomatePain
-  - Tomate
-  - PainViande
-  - Burger
-  - CutTomate
-  - ViandeCook
-  - PainSaladeViande
-  - PainCut
-  - Salad
-  - CutSalade
-  - PainViandeTomate
-  - Plaque
   - Planche
->>>>>>> 19638e9 (updt)
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-<<<<<<< HEAD
   - Aliment
-=======
-  - Aliments
->>>>>>> 19638e9 (updt)
   - Water
   - UI
   - Station

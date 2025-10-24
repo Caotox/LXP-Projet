@@ -16,7 +16,7 @@ public class PiggyController : MonoBehaviour
     public float interactRange = 1f;
     public LayerMask interactLayer;
     public LayerMask grabLayer;
- 
+    public GameObject steakCookedPrefab;
     public GameObject tomatePrefab;
     public GameObject SaladePrefab;
     public GameObject SteakPrefab;
@@ -133,14 +133,7 @@ public class PiggyController : MonoBehaviour
         }
         return;
     }
-<<<<<<< HEAD
     else // POUR PLANCHE ET POÊLE
-=======
-
-    AlimentController heldAliment = heldObject?.GetComponent<AlimentController>();
-
-    if (areaTag == "Planche")
->>>>>>> 19638e9 (updt)
     {
         // Chercher les aliments SUR la zone (pas la zone elle-même)
         Collider2D[] objetsSurZone = Physics2D.OverlapCircleAll(areaHit.transform.position, 1f);
@@ -156,7 +149,6 @@ public class PiggyController : MonoBehaviour
                 break;
             }
         }
-<<<<<<< HEAD
 
         if (aliment == null)
         {
@@ -172,11 +164,11 @@ public class PiggyController : MonoBehaviour
             if (aliment.isOnPlanche && (aliment.isTomate || aliment.isSalade || aliment.isPain) && !aliment.isCut)
             {
                 currentAction = "isCutting";
-                Debug.Log("✅ Action de découpe définie !");
+                Debug.Log("Action de découpe définie !");
             }
             else
             {
-                Debug.Log("❌ Conditions non remplies pour découper");
+                Debug.Log("Conditions non remplies pour découper");
                 return;
             }
         }
@@ -186,11 +178,15 @@ public class PiggyController : MonoBehaviour
             if (aliment.isOnPoele && aliment.isViande && !aliment.isCooked)
             {
                 currentAction = "isCooking";
-                Debug.Log("✅ Action de cuisson définie !");
+                Debug.Log("Action de cuisson définie !");
+            }
+            else if (aliment.CompareTag("PoeleViande")){
+                Instantiate(steakCookedPrefab, aliment.transform.position, Quaternion.identity);
+                Destroy(aliment.gameObject);
             }
             else
             {
-                Debug.Log("❌ Conditions non remplies pour cuire");
+                Debug.Log("Conditions non remplies pour cuire");
                 return;
             }
         }
@@ -211,113 +207,8 @@ public class PiggyController : MonoBehaviour
             );
             currentAction = "";
         }
-=======
-        else
-            {   
-            Debug.Log("Conditions non remplies pour découper:");
-            Debug.Log(" - isOnPlanche: " + aliment.isOnPlanche);
-            Debug.Log(" - !isCut: " + !aliment.isCut);
-        }
-    }
-    else if (areaTag == "Poele")
-        {
-            Debug.Log(" SUR POÊLE - Vérification cuisson");
-        Debug.Log(" - isOnPoele: " + aliment.isOnPoele);
-        Debug.Log(" - isViande: " + aliment.isViande);
-        Debug.Log(" - !isCooked: " + !aliment.isCooked);
-            Debug.Log("Sur la plaque de cuisson");
-            Debug.Log(aliment.name + " - isOnPoele: " + aliment.isOnPoele + " - isViande: " + aliment.isViande + " - isCooked: " + aliment.isCooked);
-        if (aliment.isOnPoele && aliment.isViande && !aliment.isCooked)
-        {
-            currentAction = "isCooking";
-            Debug.Log("Action définie: " + currentAction);
-        }
-    }
-    else if (areaTag == "Assiette")
-        {
-        if (heldAliment == null)
-            {
-                Debug.Log("Tu ne tiens rien à ajouter !");
-                return; 
-            }
-
-            if (!aliment.isAssiette)
-            {
-                 Debug.Log(aliment.name + " n'est pas une assiette.");
-                 return;
-            }
-
-            Debug.Log("Interaction Assiette. Tenu: " + heldAliment.name + ". Assiette: " + aliment.name);
-            
-            if (heldAliment.isPain)
-            {
-                if (!aliment.isPain) 
-                {
-                    currentAction = "isPlatting";
-                }
-                else
-                {
-                     Debug.Log("Il y a déjà du pain !");
-                }
-            }
-            else if (heldAliment.isTomate || heldAliment.isSalade)
-            {
-
-                if (!aliment.isPain) 
-                {
-                    Debug.LogWarning("ALERTE: Mets le pain d'abord !");
-                    return; 
-                }
-                
-                if (!heldAliment.isCut) 
-                {
-                    Debug.LogWarning("ALERTE: L'ingrédient n'est pas coupé !");
-                    return; 
-                }
-
-                currentAction = "isPlatting";
-            }
-            
-            else if (heldAliment.isViande) 
-            {
-                if (!aliment.isPain)
-                {
-                     Debug.LogWarning("ALERTE: Mets le pain d'abord !");
-                     return;
-                }
-                if (!heldAliment.isCooked)
-                {
-                     Debug.LogWarning("ALERTE: La viande n'est pas cuite !");
-                     return;
-                }
-                currentAction = "isPlatting";
-            }
-        }
-
-        if (!aliment.isAssiette)
-        {
-            currentAction = "isPlatting";
-        }
-
-        if (!string.IsNullOrEmpty(currentAction))
-    {
-        Debug.Log("Exécution de l'action: " + currentAction);
-        aliment.HandleAlimentAction(aliment.isTomate, 
-            aliment.isSalade, 
-            aliment.isPain, 
-            aliment.isViande,
-            aliment.isCut, 
-            aliment.isCooked, 
-            aliment.isAssiette,
-            currentAction
-        );
-        currentAction = "";
->>>>>>> 19638e9 (updt)
     }
 }
-    
-
-    
 
     bool CanAssembleOnPlate(AlimentController assiette, AlimentController ingredientTenu)
     {
@@ -503,6 +394,7 @@ void AssembleBurger(AlimentController assiette, AlimentController ingredientTenu
     {
         if (Input.GetKeyDown(grabKey) && heldObject == null)
         {
+            Debug.Log("Tentative de saisie d'un objet");
             RaycastHit2D hit = Physics2D.Raycast(transform.position, moveDir, interactRange, grabLayer);
             if (hit.collider != null)
             {
