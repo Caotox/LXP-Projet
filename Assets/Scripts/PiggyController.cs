@@ -9,7 +9,6 @@ public class PiggyController : MonoBehaviour
     public float dashDuration = 0.2f;
     public float dashCooldown = 1f;
     public string currentAction = "";
-    public GameObject alertPanel;
     public Text messageText;
 
     public KeyCode interactKey = KeyCode.E;
@@ -43,7 +42,11 @@ public class PiggyController : MonoBehaviour
 
     void Start()
     {
-        alertPanel.SetActive(false);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+    if (rb != null)
+    {
+        rb.freezeRotation = true;
+    }
     }
 
     void Update()
