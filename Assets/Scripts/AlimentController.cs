@@ -84,7 +84,7 @@ public class AlimentController : MonoBehaviour
                 if (isViande && !isCooked)
                 {
                     Debug.Log("Cuit la viande !");
-                    ReplaceWithPrefab(viandeCookedPrefab);
+                    ReplaceWithPrefab(viandeCookedPlatePrefab);
                 }
             }
             else

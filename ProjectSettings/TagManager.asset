@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
+<<<<<<< HEAD
   - Plaque
   - CutSalade
   - Salad
@@ -25,11 +26,38 @@ TagManager:
   - Planche
   - Tomate
   - Poele
+=======
+  - PainSalade
+  - Baguette
+  - Steak
+  - Assiette
+  - PainTomate
+  - PainCutAssiette
+  - Poele
+  - PoeleViande
+  - SaladeTomatePain
+  - Tomate
+  - PainViande
+  - Burger
+  - CutTomate
+  - ViandeCook
+  - PainSaladeViande
+  - PainCut
+  - Salad
+  - CutSalade
+  - PainViandeTomate
+  - Plaque
+  - Planche
+>>>>>>> 19638e9 (updt)
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
+<<<<<<< HEAD
   - Aliment
+=======
+  - Aliments
+>>>>>>> 19638e9 (updt)
   - Water
   - UI
   - Station
