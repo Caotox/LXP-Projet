@@ -30,7 +30,8 @@ public class PiggyController : MonoBehaviour
     public GameObject PainSaladeTomateSteakPrefab;
     public InputActionReference horizontalAction;
     public InputActionReference verticalAction;
-
+    public Sprite newSprite;
+    public SpriteRenderer spriteRenderer;
     private Vector2 moveDir;
     private bool isDashing = false;
     private float dashTime = 0f;
@@ -47,6 +48,7 @@ public class PiggyController : MonoBehaviour
     {
         rb.freezeRotation = true;
     }
+    spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -55,6 +57,22 @@ public class PiggyController : MonoBehaviour
         HandleDash();
         HandleInteraction();
         HandleGrab();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Collided with: " + collision.gameObject.name);
+        if (collision.gameObject.CompareTag("BaconMaker"))
+        {
+            if (spriteRenderer != null && newSprite != null)
+            {
+                spriteRenderer.sprite = newSprite;
+                Debug.Log("Sprite changé !");
+            }
+            else
+            {
+                Debug.LogWarning("SpriteRenderer ou newSprite non assigné !");
+            }
+        }
     }
 
     void HandleMovement()
